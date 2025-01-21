@@ -1,7 +1,7 @@
 
 import './App.css';
-import HowItWorks from './mini-components/Howitworks';
-import Marketspreads from './mini-components/Marketspreads';
+import HowItWorks from './minicomponent/Howitworks';
+import Marketspreads from './minicomponent/Marketspreads';
 import Navbar from './components/Navbar';
 import HeroContainer from './minicomponent/HeroContainer';
 import TradingAccounts from './minicomponent/TradingAccounts';
