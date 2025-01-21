@@ -1,10 +1,14 @@
 
 import './App.css';
-
+import Navbar from './components/Navbar';
+import HeroContainer from './minicomponent/HeroContainer';
+import TradingAccounts from './minicomponent/TradingAccounts';
 function App() {
   return (
     <div className="App">
-     < h1>Learn React</h1>
+      <Navbar />
+      <HeroContainer />
+      <TradingAccounts />
     </div>
   );
 }

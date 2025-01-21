@@ -1,0 +1,153 @@
+/* Navbar.module.css */
+.header {
+    width: 100%;
+  }
+  
+  /* Top Bar Styles */
+  .topBar {
+    background-color: #1a1a1a;
+    height: 45px;  /* Increased height */
+  }
+  
+  .topBarContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .phoneInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 14px;  /* Slightly larger font */
+  }
+  
+  .headphoneIcon {
+    font-size: 14px;  /* Larger icon */
+  }
+  
+  .authButtons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .openAccountBtn {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 20px;  /* Larger padding */
+    border-radius: 4px;
+    font-size: 14px;  /* Larger font */
+    transition: background-color 0.2s;
+  }
+  
+  .loginBtn {
+    background-color: transparent;
+    color: white;
+    padding: 7px 20px;  /* Larger padding */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-size: 14px;  /* Larger font */
+    transition: all 0.2s;
+  }
+  
+  /* Main Navigation Styles */
+  .mainNav {
+    background-color: #fff;
+    height: 90px;  /* Increased height */
+    border-bottom: 1px solid #eee;
+    margin-top: 1px;  /* Small gap from top navbar */
+  }
+  
+  .mainNavContent {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;  /* Added vertical padding */
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .logo {
+    width: 48px;
+    height: 48px;
+    background-color: #28a745;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  .brandName {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .navMenu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navLink {
+    color: #333;
+    font-size: 14px;
+    padding: 8px 22px;  /* Slightly larger padding */
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.2s;
+  }
+  
+  .navLink:hover {
+    background-color: #f8f9fa;
+    color: #28a745;
+  }
+  
+  .searchBtn {
+    color: #333;
+    font-size: 16px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+  }
+  
+  .searchBtn:hover {
+    color: #28a745;
+  }
+  
+  /* Hover effects */
+  .openAccountBtn:hover {
+    background-color: #218838;
+  }
+  
+  .loginBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .navMenu {
+      gap: 15px;
+    }
+  
+    .navLink {
+      padding: 8px 18px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navMenu {
+      display: none;
+    }
+  }
