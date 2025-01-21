@@ -165,12 +165,13 @@ const MarketSpreads = () => {
   
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => prev === Math.floor(getCategoryData().length / 5) ? 0 : prev + 1);
+    setCurrentSlide((prev) => (prev + 1) % Math.ceil(getCategoryData().length / 5));
   };
-
+  
   const prevSlide = () => {
-    setCurrentSlide((prev) => prev === 0 ? Math.floor(getCategoryData().length / 5) : prev - 1);
+    setCurrentSlide((prev) => (prev === 0 ? Math.ceil(getCategoryData().length / 5) - 1 : prev - 1));
   };
+  
 
   return (
     <div className="market-spreads">
