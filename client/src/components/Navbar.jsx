@@ -28,9 +28,9 @@ const Navbar = () => {
           <div className={styles.mainNavContent}>
             <div className={styles.brand}>
               <div className={styles.logo}>
-                <span>FT</span>
+                <span>GB</span>
               </div>
-              <div className={styles.brandName}>ForTradex</div>
+              <div className={styles.brandName}>GBFX</div>
             </div>
             
             <div className={styles.navMenu}>
