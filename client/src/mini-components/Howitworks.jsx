@@ -1,6 +1,6 @@
 import React from 'react';
 import './how-it-works.css';
-import img from '../img/process-1.jpg';
+import img from '../assets/process-1.jpg';
 
 const HowItWorks = () => {
   const steps = [
