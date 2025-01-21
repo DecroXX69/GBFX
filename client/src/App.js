@@ -1,6 +1,6 @@
 
 import './App.css';
-import HowItWorks from './minicomponent/Howitworks';
+import Footer from './components/Footer'; import HowItWorks from './minicomponent/Howitworks';
 import Marketspreads from './minicomponent/Marketspreads';
 import Navbar from './components/Navbar';
 import HeroContainer from './minicomponent/HeroContainer';
@@ -11,6 +11,7 @@ function App() {
       <Navbar />
       <HeroContainer />
       <TradingAccounts />
+     <Footer />
     </div>
   );
 }
