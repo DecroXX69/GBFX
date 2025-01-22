@@ -9,7 +9,8 @@ import TradingAccounts from './minicomponent/TradingAccounts';
 import Contact from './components/Contact';
 import Whoweare from './minicomponent/Whoweare';
 import FAQSection from './components/FAQ';
-
+import About from './components/About';
+import NewsFeed from './minicomponent/NewsFeed';
 
 
 
@@ -23,9 +24,11 @@ function App() {
       <Marketspreads />
       <Contact />
       <Whoweare />
+      <About />
+      <NewsFeed />
      <Footer />
-    <FAQSection />
-
+    {/* <FAQSection /> */}
+ 
 
 
 
