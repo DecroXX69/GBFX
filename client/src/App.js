@@ -8,6 +8,10 @@ import HeroContainer from './minicomponent/HeroContainer';
 import TradingAccounts from './minicomponent/TradingAccounts';
 import Contact from './components/Contact';
 import Whoweare from './minicomponent/Whoweare';
+import FAQSection from './components/FAQ';
+
+
+
 
 function App() {
   return (
@@ -20,6 +24,12 @@ function App() {
       <Contact />
       <Whoweare />
      <Footer />
+    <FAQSection />
+
+
+
+
+    
     </div>
   );
 }
