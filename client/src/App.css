@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
 .App {
   text-align: center;
 }
@@ -13,9 +15,23 @@
   box-sizing: border-box;
 }
 
+:root{
+  --theme-color: #22823a;
+  --secondary-color: #131615;
+  --theme-color-2: #e4753d;
+  --text-color: #666;
+  --title-color: #111;
+  --text-font: "IBM Plex Sans", sans-serif;
+  --title-font: "Ubuntu", sans-serif;
+}
+
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  /* font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; */
   -webkit-font-smoothing: antialiased;
+  body {
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
   color: #333;
@@ -70,3 +86,6 @@ button {
     transform: rotate(360deg);
   }
 }
+
+
+

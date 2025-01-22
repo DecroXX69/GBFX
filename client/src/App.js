@@ -7,15 +7,17 @@ import Navbar from './components/Navbar';
 import HeroContainer from './minicomponent/HeroContainer';
 import TradingAccounts from './minicomponent/TradingAccounts';
 import Contact from './components/Contact';
+import Signup from './components/Signup';
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <HeroContainer />
+      {/* <HeroContainer />
       <TradingAccounts />
       <HowItWorks />
       <Marketspreads />
-      <Contact />
+      <Contact /> */}
+      <Signup />
      <Footer />
     </div>
   );

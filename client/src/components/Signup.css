@@ -1,0 +1,112 @@
+/* Custom CSS for Signup Form */
+.form-input {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .form-input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+  }
+  
+  .signup-btn {
+    background-color: #28a745 !important;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-btn:hover {
+    background-color: #218838 !important;
+  }
+  
+  /* Styles for the right side content */
+  h1 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .text-success {
+    color: #22823A !important;
+  }
+  
+  /* Floating elements placeholder styles */
+  .floating-elements {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  /* Add these classes when you have the actual float elements */
+  .float-element-1,
+  .float-element-2,
+  .float-element-3 {
+    position: absolute;
+    /* You'll need to add specific positioning for each element */
+  }
+
+  body {
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  .floating-elements {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  
+  .shape {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+  }
+  
+  .shape-1 {
+    top: 20%;
+    right: 10%;
+    animation: moveShape1 6s infinite;
+  }
+  
+  .shape-2 {
+    top: 50%;
+    right: 5%;
+    animation: moveShape2 8s infinite;
+  }
+  
+  .shape-3 {
+    top: 70%;
+    right: 20%;
+    animation: moveShape3 10s infinite;
+  }
+  
+  @keyframes moveShape1 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(30px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes moveShape2 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(40px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes moveShape3 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(50px); }
+    100% { transform: translateY(0); }
+  }
+  
