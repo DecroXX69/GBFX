@@ -1,0 +1,348 @@
+.pageContainer {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .backgroundElements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .circle1, .circle2, .circle3 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+  }
+  
+  .circle1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(5, 150, 105, 0.1);
+    top: -100px;
+    right: -100px;
+  }
+  
+  .circle2 {
+    width: 300px;
+    height: 300px;
+    background: rgba(59, 130, 246, 0.1);
+    bottom: -50px;
+    left: -50px;
+  }
+  
+  .circle3 {
+    width: 200px;
+    height: 200px;
+    background: rgba(245, 158, 11, 0.1);
+    top: 40%;
+    left: 30%;
+  }
+  
+  .grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+  }
+  
+  .mainContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .contentWrapper {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+  }
+  
+  .textContainer {
+    flex: 1;
+    max-width: 700px;
+  }
+  
+  .statsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0 3rem;
+  }
+  
+  .statItem {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .statItem:hover {
+    transform: translateY(-5px);
+  }
+  
+  .statIcon {
+    width: 2rem;
+    height: 2rem;
+    color: #059669;
+    margin: 0 auto 0.5rem;
+  }
+  
+  .statItem h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.25rem;
+  }
+  
+  .statItem p {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    position: sticky;
+    top: 2rem;
+    display: none;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 100%;
+    /* height: auto; */
+    height: 70%;
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+  
+  .imageWrapper:hover .image {
+    transform: scale(1.05);
+  }
+  
+  .imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(5, 150, 105, 0.1), transparent);
+  }
+  
+  @media (min-width: 1024px) {
+    .imageContainer {
+      display: block;
+    }
+  }
+  
+  .breadcrumb {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    color: #6b7280;
+  }
+  
+  .separator {
+    margin: 0 0.5rem;
+    color: #9ca3af;
+  }
+  
+  .active {
+    color: #059669;
+  }
+  
+  .mainTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    background: linear-gradient(45deg, #111827, #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .badge {
+   /* Keeps the width as long as the content */
+    background-color: #ecfdf5;
+    color: #059669;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(5, 150, 105, 0.1);
+    text-align: left; /* Ensures text is aligned to the left */
+    position: relative;
+}
+
+.badge::after {
+    content: '';
+    /* display: inline-block;  */
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    height: 2px; 
+    width: 13%; 
+    background-color: #059669;
+    opacity: 0.6;
+}
+
+
+
+  .subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+    text-align: left;
+  }
+  
+  .highlight {
+    color: #059669;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #059669;
+    opacity: 0.3;
+  }
+  
+  .sectionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .sectionContainer {
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .sectionContainer:hover {
+    transform: translateY(-2px);
+  }
+  
+  .sectionContainer:hover .sectionTitle {
+    color: #059669;
+  }
+
+  .sectionButton {
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    transition: all 0.2s;
+  }
+  
+  .sectionButton:hover {
+    background-color: #f9fafb;
+  }
+  
+  .sectionButton.active {
+    background-color: #f9fafb;
+    border-bottom: 2px solid #059669;
+  }
+  
+  .sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .chevron {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #059669;
+    transition: transform 0.2s;
+  }
+  
+  .active .chevron {
+    transform: rotate(180deg);
+  }
+  
+  .sectionContent {
+    padding: 1.5rem;
+    background-color: white;
+  }
+  
+  .sectionText {
+    color: #4b5563;
+    line-height: 1.625;
+  }
+  
+  .sectionText p {
+    margin-bottom: 1rem;
+  }
+  
+  .sectionText ul,
+  .sectionText ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionText li {
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  
+  .sectionText li strong {
+    color: #1f2937;
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .mainContainer {
+      padding: 2rem 1rem;
+    }
+  
+    .mainTitle {
+      font-size: 2.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .statsContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .statsContainer {
+      grid-template-columns: 1fr;
+    }
+  }
