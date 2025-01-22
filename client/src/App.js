@@ -7,6 +7,8 @@ import Navbar from './components/Navbar';
 import HeroContainer from './minicomponent/HeroContainer';
 import TradingAccounts from './minicomponent/TradingAccounts';
 import Contact from './components/Contact';
+import Whoweare from './minicomponent/Whoweare';
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +18,7 @@ function App() {
       <HowItWorks />
       <Marketspreads />
       <Contact />
+      <Whoweare />
      <Footer />
     </div>
   );

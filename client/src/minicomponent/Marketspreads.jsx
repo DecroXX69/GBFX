@@ -171,7 +171,6 @@ const MarketSpreads = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? Math.ceil(getCategoryData().length / 5) - 1 : prev - 1));
   };
-  
 
   return (
     <div className="market-spreads">
@@ -196,13 +195,15 @@ const MarketSpreads = () => {
         <div className="trading-pairs-container">
           <button className="nav-btn prev" onClick={prevSlide}>❮</button>
           <div className="trading-pairs">
-            <div
-              className="pairs-slider"
-              style={{
-                transform: `translateX(-${currentSlide * 100}%)`,
-                gridTemplateColumns: `repeat(${Math.min(getCategoryData().length, 4)}, 1fr)`
-              }}
-            >
+          <div
+  className="pairs-slider"
+  style={{
+    transform: `translateX(-${(currentSlide % Math.ceil(getCategoryData().length / 5)) * 100}%)`,
+    gridTemplateColumns: `repeat(${Math.min(getCategoryData().length, 4)}, 1fr)`,
+  }}
+>
+
+            
               {getCategoryData().map((item, index) => (
                 <div key={index} className="pair-card">
                   <div className="pair-header">
