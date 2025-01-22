@@ -9,7 +9,7 @@ import TradingAccounts from './minicomponent/TradingAccounts';
 import Contact from './components/Contact';
 import Whoweare from './minicomponent/Whoweare';
 import FAQSection from './components/FAQ';
-
+import TradeCard from './minicomponent/TradeCard';
 
 
 
@@ -25,11 +25,11 @@ function App() {
       <Whoweare />
      <Footer />
     <FAQSection />
+    <TradeCard />
 
 
 
 
-    
     </div>
   );
 }
