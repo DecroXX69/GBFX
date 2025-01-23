@@ -1,0 +1,120 @@
+.testimonials {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .testimonialContainer {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 30px;
+  }
+  
+  .content {
+    text-align: left;
+  }
+  
+  .quote {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .author {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .navigation {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .navButton {
+    width: 12px;
+    height: 12px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+  
+  .activeDot {
+    background-color: #4caf50;
+  }
+  
+  .navButton.active .dot {
+    background-color: #4caf50;
+  }
+  
+  @media (max-width: 767px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .testimonialContainer {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .image {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .content {
+      text-align: center;
+    }
+  
+    .quote {
+      font-size: 1.4rem;
+    }
+  
+    .author {
+      font-size: 1.1rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+    }
+  }

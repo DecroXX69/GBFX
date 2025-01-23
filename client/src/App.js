@@ -1,4 +1,3 @@
-
 import './App.css';
 import Footer from './components/Footer'; 
 import HowItWorks from './minicomponent/Howitworks';
@@ -11,6 +10,12 @@ import Contact from './components/Contact';
 import Whoweare from './minicomponent/Whoweare';
 import FAQSection from './components/FAQ';
 import TradeCard from './minicomponent/TradeCard';
+import MarketSpreadsAndSwaps from './minicomponent/MarketSpreadsAndSwaps';
+ // Ensure correct import
+import About from './components/About';
+import NewsFeed from './minicomponent/NewsFeed';
+import Testimonials from './minicomponent/Testimonials';
+import OurTeam from './minicomponent/Ourteam';
 
 
 
@@ -26,10 +31,17 @@ function App() {
       <Contact /> 
       <Signup />
       <Whoweare />
+      
+      <FAQSection />
+      <TradeCard />
+      <MarketSpreadsAndSwaps />
+      
+      <About />
+      <NewsFeed />
+     <Testimonials />
+     <OurTeam />
      <Footer />
-    <FAQSection />
-    <TradeCard />
-
+    
 
 
 
