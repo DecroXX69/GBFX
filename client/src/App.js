@@ -10,27 +10,23 @@ import Contact from './components/Contact';
 import Whoweare from './minicomponent/Whoweare';
 import FAQSection from './components/FAQ';
 import About from './components/About';
-import NewsFeed from './minicomponent/NewsFeed';import TradeCard from './minicomponent/TradeCard';
-
+import NewsFeed from './minicomponent/NewsFeed';
+import TradeCard from './minicomponent/TradeCard';
+import Home from './components/Home';
 
 
 import Signup from './components/Signup';
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <HeroContainer />
-      <TradingAccounts />
-      <HowItWorks />
-      <Marketspreads />
+      <Home />
       <Contact /> 
       <Signup />
-      <Whoweare />
+     
       <About />
-      <NewsFeed />
-     <Footer />
+      
     <FAQSection />
-    <TradeCard />
+   
 
 
 
