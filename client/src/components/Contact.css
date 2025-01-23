@@ -47,7 +47,7 @@
     font-size: 18px;
   }
   .home-link {
-    color: #00DC82;
+    color: #22823A;
     text-decoration: none;
   }
   
@@ -63,16 +63,17 @@
     padding: 100px 0;
   }
   
-  .section-title {
+  .section-title1 {
     text-align: left;
-    font-size: 34px;
+    font-size: 38px;
     font-weight: 700;
     margin-bottom: 40px;
     color: #1A1A1A;
+    margin-bottom: 10px;
   }
   
   .highlight {
-    color: #0066FF;
+    color: #22823A;
   }
   
   .social-links {
@@ -91,8 +92,8 @@
     border: 1px solid #E5E5E5;
     color: #666;
     transition: all 0.3s ease;
-    background-color: #00DC82;
-    border-color: #00DC82;
+    background-color: #22823A;
+    /* border-color: #00DC82; */
     color: white;
   }
   
@@ -150,7 +151,7 @@
   .contact-submit-btn {
     width: 100%;
     padding: 15px;
-    background-color: #00DC82;
+    background-color: #22823A;
     border: none;
     border-radius: 8px;
     font-weight: 600;

@@ -56,7 +56,7 @@ const Contact = () => {
         <Row className="align-items-center">
           <Col lg={6}>
             <div className="contact-info">
-              <h2 className="section-title">
+              <h2 className="section-title1">
                 Let's <span className="highlight">Get In Touch</span>
                 <br />With Us
               </h2>
