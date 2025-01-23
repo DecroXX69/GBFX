@@ -1,0 +1,196 @@
+/* Overall section styling */
+.pricing-section {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px solid #28a745; /* Green border around the section */
+    border-radius: 10px;
+    background-color: #f4fdf4;
+    background-image: linear-gradient(135deg, #e6f9e0, #ffffff); /* Subtle minimal gradient background */
+    margin: 50px auto;
+    max-width: 1200px;
+    z-index: 1;
+    border: 1px solid #d1e7d1; /* Subtle border */
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in effect for section */
+  }
+  
+  /* Adding a z-index to ensure particles stay behind */
+  .pricing-section canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Particles should stay behind the content */
+  }
+  
+  /* Header style for section */
+  .pricing-header {
+    position: relative;
+    z-index: 2;
+    animation: slideUp 1s ease-out forwards; /* Slide-up animation for header */
+  }
+  
+  .pricing-header h2 {
+    color: #28a745;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .pricing-header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  /* Main container for pricing boxes */
+  .pricing-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px; /* Reduced gap */
+    flex-wrap: wrap;
+    padding: 0 20px;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards; /* Fade-in effect for pricing plans */
+  }
+  
+  /* Common style for all pricing boxes */
+  .pricing-plan {
+    background-color: white;
+    border: 2px solid #28a745; /* Green border */
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 2;
+    border: 1px solid #d1e7d1; /* Subtle border for individual plans */
+    opacity: 1;
+    animation: scaleUp 0.8s ease-out forwards; /* Scale-up animation on appearance */
+  }
+  
+  .pricing-plan h3 {
+    color: #28a745;
+    font-size: 2rem;
+  }
+  
+  .pricing-plan p {
+    color: #28a745;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .pricing-plan ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .pricing-plan li {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .pricing-plan button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+  }
+  
+  .pricing-plan button:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Button hover scale */
+  }
+  
+  /* Highlighted (middle) plan */
+  .highlighted {
+    transform: scale(1.07); /* Increased scaling */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    border-color: #007b33; /* A darker shade of green for better emphasis */
+    background-color: #f4fdf4; /* Slight background color change */
+    animation: highlightedEffect 0.8s ease-in-out; /* Animating the highlighted box */
+    opacity: 1; /* Ensure opacity is 1 so it's visible */
+  }
+  
+  .highlighted h3,
+  .highlighted p {
+    color: #007b33; /* Darker green color for text */
+  }
+  
+  .highlighted button {
+    background-color: #007b33;
+    color: white;
+  }
+  
+  .highlighted button:hover {
+    background-color: #005c2f;
+  }
+  
+  /* Hover effect for all boxes */
+  .pricing-plan:hover {
+    transform: scale(1.05); /* Slight grow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes highlightedEffect {
+    0% {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+      transform: scale(1.07);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* Responsive design */
+  @media screen and (max-width: 768px) {
+    .pricing-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .pricing-plan {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+  

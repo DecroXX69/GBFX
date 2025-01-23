@@ -16,7 +16,7 @@ import About from './components/About';
 import NewsFeed from './minicomponent/NewsFeed';
 import Testimonials from './minicomponent/Testimonials';
 import OurTeam from './minicomponent/Ourteam';
-
+import Pricing from './minicomponent/PricingPans';
 
 
 import Signup from './components/Signup';
@@ -39,7 +39,7 @@ function App() {
      <Footer />
     
 
-
+<Pricing/>
 
     </div>
   );
