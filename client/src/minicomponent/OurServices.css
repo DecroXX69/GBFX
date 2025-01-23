@@ -1,0 +1,77 @@
+.case1-section-area {
+    padding: 60px 0;
+  }
+  
+  .case-header-area {
+    margin-bottom: 30px;
+  }
+  
+  .heading2 img {
+    margin: 10px;
+    max-width: 50px;
+  }
+  
+  .text-anime-style-3 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .cs_case_study_1_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .cs_case_study {
+    flex: 1 1 calc(33.333% - 20px);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cs_case_study:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cs_case_study_thumb {
+    display: block;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .cs_case_study_thumb1 {
+    background-image: url("https://seoc-html-v2.vercel.app/assets/img/all-images/case-img1.png");
+  }
+  
+  .cs_case_study_thumb2 {
+    background-image: url("https://seoc-html-v2.vercel.app/assets/img/all-images/case-img2.png");
+  }
+  
+  .cs_case_study_thumb3 {
+    background-image: url("https://seoc-html-v2.vercel.app/assets/img/all-images/case-img3.png");
+  }
+  
+  /* Repeat for other thumb classes */
+  
+  .content-area1 a {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .content-area p {
+    font-size: 1rem;
+    color: #555;
+    padding: 15px;
+    text-align: center;
+  }
+  
