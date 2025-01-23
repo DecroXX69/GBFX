@@ -10,6 +10,7 @@ import team6 from '../assets/team6.jpg';
 
 const OurTeam = () => {
   const teamMembers = [
+    
     {
       name: 'Olivia Quinn',
       role: 'Forex Trader',
@@ -74,6 +75,7 @@ const OurTeam = () => {
 
   return (
     <div className={styles.ourTeam}>
+        <div className='container'> <div className={styles.badge}>Our Team</div></div>
       <h2 className={styles.title}>Our Talented Team Members</h2>
       <div className={styles.container}>
         <div className={styles.rowContainer}>
@@ -92,6 +94,7 @@ const OurTeam = () => {
 };
 
 const TeamMemberCard = ({ member }) => (
+    
   <div className={styles.member}>
     <img 
       src={member.image} 

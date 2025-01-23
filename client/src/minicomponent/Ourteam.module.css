@@ -7,7 +7,30 @@
     font-size: 2.5rem;
     margin-bottom: 40px;
   }
-  
+  .badge {
+    /* Keeps the width as long as the content */
+     /* background-color: #ecfdf5; */
+     color: #059669;
+     border-radius: 9999px;
+     font-size: 0.875rem;
+     font-weight: 500;
+     margin-bottom: 2rem;
+     /* box-shadow: 0 2px 4px rgba(5, 150, 105, 0.1); */
+     text-align: left; /* Ensures text is aligned to the left */
+     position: relative;
+ }
+ 
+ .badge::after {
+     content: '';
+     /* display: inline-block;  */
+     position: absolute;
+     bottom: -2px; 
+     left: 0;
+     height: 2px; 
+     width: 6%; 
+     background-color: #059669;
+     opacity: 0.6;
+ }
   .container {
     max-width: 1200px;
     margin: 0 auto;
