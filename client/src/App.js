@@ -13,6 +13,8 @@ import MarketSpreadsAndSwaps from './minicomponent/MarketSpreadsAndSwaps';
  // Ensure correct import
 import About from './components/About';
 import NewsFeed from './minicomponent/NewsFeed';
+import Testimonials from './minicomponent/Testimonials';
+import OurTeam from './minicomponent/Ourteam';
 
 
 
@@ -35,6 +37,8 @@ function App() {
       
       <About />
       <NewsFeed />
+     <Testimonials />
+     <OurTeam />
      <Footer />
     
 
