@@ -4,21 +4,21 @@
     color: white;
     overflow: hidden;
     animation: fadeInUp 1s ease-out;
-  }
-  
-  .container {
+}
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-  }
-  
-  .header {
+}
+
+.header {
     text-align: center;
     margin-bottom: 40px;
     animation: fadeIn 1.5s ease-out;
-  }
-  
-  .trade-now-btn {
+}
+
+.trade-now-btn {
     background: #28a745;
     color: white;
     padding: 12px 30px;
@@ -28,15 +28,15 @@
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 20px;
-  }
-  
-  .trade-now-btn:hover {
+}
+
+.trade-now-btn:hover {
     background: #218838;
     transform: scale(1.05);
-  }
-  
-  /* Category Tabs */
-  .category-tabs {
+}
+
+/* Category Tabs */
+.category-tabs {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -45,9 +45,9 @@
     padding: 10px;
     border-radius: 8px;
     animation: fadeInUp 1s ease-out;
-  }
-  
-  .category-tab {
+}
+
+.category-tab {
     background: transparent;
     border: none;
     color: white;
@@ -55,47 +55,47 @@
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.3s ease;
-  }
-  
-  .category-tab.active {
+}
+
+.category-tab.active {
     background: #28a745;
     transform: scale(1.1);
-  }
-  
-  .category-tab:hover {
+}
+
+.category-tab:hover {
     background: #218838;
     color: white;
     transform: scale(1.05);
-  }
-  
-  /* Market Table */
-  table {
+}
+
+/* Market Table */
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 30px;
-  }
-  
-  th, td {
+}
+
+th, td {
     padding: 12px;
     text-align: center;
     font-size: 14px;
     font-weight: 500;
-  }
-  
-  th {
+}
+
+th {
     background: #333;
     color: white;
     border-radius: 5px;
-  }
-  
-  td {
+}
+
+td {
     background: #2a2a2a;
     color: white;
     border-radius: 5px;
-  }
-  
-  /* Price Up and Down Arrows */
-  .price-up::after {
+}
+
+/* Price Up and Down Arrows */
+.price-up::after {
     content: '';
     display: inline-block;
     margin-left: 4px;
@@ -105,9 +105,9 @@
     border-right: 5px solid transparent;
     border-bottom: 7px solid green;
     animation: bounceUp 0.8s ease-in-out infinite;
-  }
-  
-  .price-down::after {
+}
+
+.price-down::after {
     content: '';
     display: inline-block;
     margin-left: 4px;
@@ -117,103 +117,191 @@
     border-right: 5px solid transparent;
     border-top: 7px solid red;
     animation: bounceDown 0.8s ease-in-out infinite;
-  }
-  
-  /* Chart Styles */
-  .chart-container {
+}
+
+/* Chart Styles */
+.chart-container {
     display: flex;
-    justify-content: center;  /* Horizontally center the chart */
-    align-items: center;      /* Vertically center the chart */
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 50px;
-  }
-  
-  .chart-container .line-chart {
+}
+
+.chart-container .line-chart {
     width: 100%;
     height: 100%;
-  }
-  
-  .chart-container .line {
+}
+
+.chart-container .line {
     stroke-width: 2;
-  }
-  
-  .chart-container .line.up {
+}
+
+.chart-container .line.up {
     stroke: green;
-  }
-  
-  .chart-container .line.down {
+}
+
+.chart-container .line.down {
     stroke: red;
-  }
-  
-  /* Arrow Animations */
-  @keyframes bounceUp {
+}
+
+/* Arrow Animations */
+@keyframes bounceUp {
     0%, 100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
     50% {
-      transform: translateY(-5px);
+        transform: translateY(-5px);
     }
-  }
-  
-  @keyframes bounceDown {
+}
+
+@keyframes bounceDown {
     0%, 100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
     50% {
-      transform: translateY(5px);
+        transform: translateY(5px);
     }
-  }
-  
-  @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
     0% {
-      opacity: 0;
-      transform: translateY(30px);
+        opacity: 0;
+        transform: translateY(30px);
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  @keyframes fadeInUp {
+}
+
+@keyframes fadeInUp {
     0% {
-      opacity: 0;
-      transform: translateY(50px);
+        opacity: 0;
+        transform: translateY(50px);
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  @keyframes slideIn {
+}
+
+@keyframes slideIn {
     0% {
-      opacity: 0;
-      transform: translateX(100px);
+        opacity: 0;
+        transform: translateX(100px);
     }
     100% {
-      opacity: 1;
-      transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
-  }
-  
-  @keyframes slideInDown {
+}
+
+@keyframes slideInDown {
     0% {
-      opacity: 0;
-      transform: translateY(-30px);
+        opacity: 0;
+        transform: translateY(-30px);
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     0%, 100% {
-      transform: scale(1);
+        transform: scale(1);
     }
     50% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
-  }
-  
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Header text */
+    .header h2 {
+        font-size: 2rem;
+    }
+
+    /* Category tabs */
+    .category-tabs {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .category-tab {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    /* Market table */
+    th, td {
+        font-size: 12px;
+    }
+
+    .trade-now-btn {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Category Tabs: Stack vertically on smaller screens */
+    .category-tabs {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Market table: Make the table scrollable horizontally */
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    /* Button */
+    .trade-now-btn {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Category Tabs */
+    .category-tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .category-tab {
+        font-size: 14px;
+    }
+
+    /* Market table: Reduce padding */
+    th, td {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .trade-now-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

@@ -1,7 +1,6 @@
 import './App.css';
 import Footer from './components/Footer'; 
 import HowItWorks from './minicomponent/Howitworks';
-import OurServices from './minicomponent/OurServices';
 import Marketspreads from './minicomponent/Marketspreads';
 import Navbar from './components/Navbar';
 import HeroContainer from './minicomponent/HeroContainer';
@@ -16,12 +15,19 @@ import About from './components/About';
 import NewsFeed from './minicomponent/NewsFeed';
 import Testimonials from './minicomponent/Testimonials';
 import OurTeam from './minicomponent/Ourteam';
+import Pricing from './minicomponent/PricingPans';
+
+
 import Signup from './components/Signup';
 import Home from './components/Home';
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Navbar />
+      <HeroContainer />
+      <TradingAccounts />
+      <HowItWorks />
+      <Marketspreads />
       <Contact /> 
       <Signup />
       <Whoweare />
@@ -37,7 +43,7 @@ function App() {
      <Footer />
     
 
-
+<Pricing/>
 
     </div>
   );
