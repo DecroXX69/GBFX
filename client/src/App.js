@@ -1,4 +1,3 @@
-
 import './App.css';
 import Footer from './components/Footer'; 
 import HowItWorks from './minicomponent/Howitworks';
@@ -10,8 +9,8 @@ import Contact from './components/Contact';
 import Whoweare from './minicomponent/Whoweare';
 import FAQSection from './components/FAQ';
 import TradeCard from './minicomponent/TradeCard';
-
-
+import MarketSpreadsAndSwaps from './minicomponent/MarketSpreadsAndSwaps';
+ // Ensure correct import
 
 function App() {
   return (
@@ -23,13 +22,11 @@ function App() {
       <Marketspreads />
       <Contact />
       <Whoweare />
-     <Footer />
-    <FAQSection />
-    <TradeCard />
-
-
-
-
+      <Footer />
+      <FAQSection />
+      <TradeCard />
+      <MarketSpreadsAndSwaps />
+      
     </div>
   );
 }
