@@ -16,10 +16,8 @@ import About from './components/About';
 import NewsFeed from './minicomponent/NewsFeed';
 import Testimonials from './minicomponent/Testimonials';
 import OurTeam from './minicomponent/Ourteam';
-
-
-
 import Signup from './components/Signup';
+import Home from './components/Home';
 function App() {
   return (
     <div className="App">

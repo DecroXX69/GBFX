@@ -22,6 +22,7 @@ const SignupForm = () => {
   };
 
   return (
+    
     <section className="signup-section">
       <div className="container-fluid p-0">
         <div className="row g-0 align-items-center">
