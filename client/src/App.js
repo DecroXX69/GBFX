@@ -11,7 +11,12 @@ import FAQSection from './components/FAQ';
 import TradeCard from './minicomponent/TradeCard';
 import MarketSpreadsAndSwaps from './minicomponent/MarketSpreadsAndSwaps';
  // Ensure correct import
+import About from './components/About';
+import NewsFeed from './minicomponent/NewsFeed';
 
+
+
+import Signup from './components/Signup';
 function App() {
   return (
     <div className="App">
@@ -20,13 +25,21 @@ function App() {
       <TradingAccounts />
       <HowItWorks />
       <Marketspreads />
-      <Contact />
+      <Contact /> 
+      <Signup />
       <Whoweare />
-      <Footer />
+      
       <FAQSection />
       <TradeCard />
       <MarketSpreadsAndSwaps />
       
+      <About />
+      <NewsFeed />
+     <Footer />
+    
+
+
+
     </div>
   );
 }
