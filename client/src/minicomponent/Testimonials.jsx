@@ -50,6 +50,7 @@ const Testimonials = () => {
 
   return (
     <div className={styles.testimonials}>
+        <div className='container'> <div className={styles.badge}>Testimonials</div></div>
       <h2 className={styles.title}>Love from Clients</h2>
       <div className={styles.container}>
         <div className={styles.testimonialContainer}>
