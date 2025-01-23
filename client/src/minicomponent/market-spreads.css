@@ -317,3 +317,64 @@
     }
   }
   
+  /* Mobile-only adjustments */
+@media (max-width: 768px) {
+  /* Make the trading pairs container scroll horizontally */
+  .trading-pairs {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;  /* Enabling smooth snap scrolling */
+    gap: 15px; /* Spacing between cards */
+    padding: 0 10px; /* Some padding to prevent cards from touching the edges */
+  }
+
+  /* Ensure pair cards are arranged in a row */
+  .pairs-slider {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 15px;
+  }
+
+  .pair-card {
+    flex-shrink: 0; /* Prevent shrinking of cards */
+    min-width: 250px; /* Minimum width of each card */
+    width: 250px; /* Fixed width to make sure they fit nicely */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: center;  /* Ensure cards snap to the center */
+  }
+
+  /* Adjust for swipe scrolling on mobile */
+  .trading-pairs::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .trading-pairs::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+  }
+
+  .trading-pairs::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Infinite horizontal scroll effect */
+  @keyframes infinite-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);  /* Move left by the full width of the container */
+    }
+  }
+
+  .pairs-slider {
+    animation: infinite-scroll  linear infinite;
+  }
+
+  /* Remove navigation buttons on mobile */
+  .nav-btn {
+    display: none;
+  }
+}
+
+/* Existing desktop and tablet styles will remain intact */
