@@ -1,54 +1,9 @@
 import React from "react";
 import "./Pricing.css";
-import Particles from "react-tsparticles";
 
 const Pricing = () => {
   return (
     <div className="pricing-section">
-      <Particles
-        options={{
-          background: {
-            color: {
-              value: "#f4fdf4",
-            },
-          },
-          particles: {
-            number: {
-              value: 50,
-            },
-            color: {
-              value: "#28a745", // Green particles
-            },
-            shape: {
-              type: "circle",
-            },
-            size: {
-              value: 3,
-            },
-            move: {
-              speed: 1,
-              direction: "none",
-              random: true,
-              straight: false,
-              outModes: {
-                default: "out",
-              },
-            },
-          },
-          interactivity: {
-            events: {
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
-              onClick: {
-                enable: true,
-                mode: "push",
-              },
-            },
-          },
-        }}
-      />
       <div className="pricing-header">
         <h2>Choose the Perfect Plan for Your Forex Journey</h2>
         <p>Whether you're starting out or ready to scale, we have the right plan for you!</p>

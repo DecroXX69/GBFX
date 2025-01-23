@@ -1,7 +1,6 @@
 import './App.css';
 import Footer from './components/Footer'; 
 import HowItWorks from './minicomponent/Howitworks';
-import OurServices from './minicomponent/OurServices';
 import Marketspreads from './minicomponent/Marketspreads';
 import Navbar from './components/Navbar';
 import HeroContainer from './minicomponent/HeroContainer';
@@ -23,7 +22,11 @@ import Signup from './components/Signup';
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Navbar />
+      <HeroContainer />
+      <TradingAccounts />
+      <HowItWorks />
+      <Marketspreads />
       <Contact /> 
       <Signup />
       <Whoweare />
