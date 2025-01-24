@@ -12,7 +12,7 @@ const Navbar = () => {
           <div className={styles.topBarContent}>
             <div className={styles.phoneInfo}>
               <FaHeadphones className={styles.headphoneIcon} />
-              <span>91 2345 678</span>
+              <span>+91 12345 67890</span>
             </div>
             <div className={styles.authButtons}>
               <button className={styles.openAccountBtn}>Open Account</button>
@@ -35,10 +35,10 @@ const Navbar = () => {
             
             <div className={styles.navMenu}>
               <a href="/" className={styles.navLink}>Home</a>
-              <a href="/trading" className={styles.navLink}>Trading</a>
-              <a href="/market" className={styles.navLink}>Market</a>
+              <a href="/trading" className={styles.navLink}>PAMM Account</a>
+              {/* <a href="/market" className={styles.navLink}>Market</a>
               <a href="/pages" className={styles.navLink}>Pages</a>
-              <a href="/blog" className={styles.navLink}>Blog</a>
+              <a href="/blog" className={styles.navLink}>Blog</a> */}
               <a href="/contact" className={styles.navLink}>Contact</a>
               <button className={styles.searchBtn}>
                 <FaSearch />

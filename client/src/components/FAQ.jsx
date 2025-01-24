@@ -8,43 +8,44 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "How can I start forex trading?",
-      answer: "To start forex trading, follow these key steps: 1) Educate yourself about forex markets and trading basics, 2) Choose a reputable forex broker, 3) Open and fund a demo account to practice risk-free, 4) Develop and test your trading strategy, and 5) Start with small positions when transitioning to live trading."
+      question: "What is a PAMM account?",
+      answer: "A PAMM account is an investment solution where a professional trader manages funds on behalf of multiple investors. The profits or losses are shared among investors in proportion to their investment in the PAMM account."
     },
     {
-      question: "What is the minimum capital needed for forex trading?",
-      answer: "While some brokers allow starting with as little as $50, it's recommended to begin with at least $500-$1000 to have adequate risk management. This allows for proper position sizing and helps absorb potential losses while learning."
+      question: "How does a PAMM account work?",
+      answer: "Trader (Manager): The trader manages the account and executes trades using a combined pool of investors’ funds.  Investor: Investors allocate funds to the PAMM account for trading.  Profits or losses are distributed proportionally to each investor’s share of the account."
     },
     {
-      question: "What are the main currency pairs to trade?",
-      answer: "The major currency pairs are EUR/USD, USD/JPY, GBP/USD, and USD/CHF. These pairs typically have the highest liquidity and tightest spreads, making them suitable for beginners. They also tend to be less volatile than exotic pairs."
+      question: "What are the benefits of investing in a PAMM account?",
+      answer: "Professional Management: Managed by experienced traders. Transparency: Investors can monitor trading performance and profit distribution Diversification: Allows access to professional strategies without trading yourself"
     },
     {
-      question: "What are the best times to trade forex?",
-      answer: "The most active trading times are during the overlap of major market sessions: London-New York (8:00-12:00 EST) and Tokyo-London (3:00-4:00 EST). These periods typically offer the best liquidity and trading opportunities."
+      question: "What risks are involved?",
+      answer: "Market Risks: Losses occur if the manager's trades perform poorly. Dependency Risk: Investors rely entirely on the manager’s expertise. Leverage Risk: PAMM accounts often involve leveraged trading, which can amplify both gains and losses."
     },
     {
-      question: "How do I manage trading risks?",
-      answer: "Essential risk management includes: setting stop-loss orders, never risking more than 1-2% of your account on a single trade, using appropriate position sizing, and maintaining a trading journal to track and improve your performance."
+      question: "How are profits and losses distributed?",
+      answer: "Profits and losses are calculated based on the percentage of funds each investor has contributed to the total pool."
     },
     {
-      question: "What trading strategies should beginners use?",
-      answer: "Beginners should start with simple strategies like trend following, support and resistance trading, or price action trading. Complex strategies with multiple indicators can be overwhelming and counterproductive when starting out."
+      question: "Can I withdraw my funds anytime?",
+      answer: "Most PAMM platforms allow withdrawals, but terms may vary. Check the withdrawal policies of the broker or platform, as some accounts may have lock-in periods or specific conditions."
+      
     },
     {
-      question: "What technical indicators are most useful?",
-      answer: "Essential indicators include Moving Averages (MA), Relative Strength Index (RSI), Moving Average Convergence Divergence (MACD), and Bollinger Bands. However, focus on mastering 2-3 indicators rather than using many simultaneously."
+      question: "How do I select a good PAMM account?",
+      answer: "Track Record: Review the trader's historical performance. Transparency: Choose brokers offering detailed performance statistics and fair terms. Risk Management: Check if the trader follows disciplined risk management strategies.",
     },
     {
-      question: "How important is fundamental analysis?",
-      answer: "Fundamental analysis is crucial in forex trading. Key factors include interest rates, economic indicators, political events, and central bank policies. Understanding these helps predict longer-term currency movements and avoid trading during high-impact news."
-    }
+      question: "What fees are charged in PAMM accounts?",
+      answer: "Performance Fee: A percentage of profits earned, typically charged by the trader.",
+    },
   ];
 
   return (
     
     <div className="faq-section-container">
-        <Navbar />
+        {/* <Navbar /> */}
       <div className="faq-content-container">
         <div className="faq-header">
           <span className="faq-tag">FAQS</span>
@@ -72,7 +73,7 @@ const FAQSection = () => {
           ))}
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

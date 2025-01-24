@@ -18,7 +18,7 @@ import OurTeam from './minicomponent/Ourteam';
 import Pricing from './minicomponent/PricingPans';
 
 
-import Signup from './components/Signup';
+// import Signup from './components/Signup';
 import Home from './components/Home';
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
       <HowItWorks />
       <Marketspreads />
       <Contact /> 
-      <Signup />
+      {/* <Signup /> */}
       <Whoweare />
       
       <FAQSection />
