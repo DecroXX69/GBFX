@@ -22,8 +22,10 @@ const HowItWorks = () => {
   ];
 
   return (
+    
     <div className="how-it-works">
       <div className="container">
+      
         <div className="works-content">
           {/* Left side - Text boxes */}
           <div className="works-left">
