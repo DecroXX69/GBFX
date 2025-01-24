@@ -9,10 +9,18 @@
   pointer-events: none;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 :root{
@@ -36,6 +44,7 @@ body {
   background-color: #fff;
   color: #333;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 a {
@@ -62,6 +71,10 @@ button {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.body{
+  overflow-x: hidden;
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -80,6 +93,7 @@ button {
 
 @keyframes App-logo-spin {
   from {
+
     transform: rotate(0deg);
   }
   to {
