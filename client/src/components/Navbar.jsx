@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <header className={styles.header}>
       {/* Top Navbar */}
-      <div className={styles.topBar}>
+      {/* <div className={styles.topBar}>
         <div className="container">
           <div className={styles.topBarContent}>
             <div className={styles.phoneInfo}>
@@ -20,7 +20,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Navbar */}
       <nav className={styles.mainNav}>
@@ -34,15 +34,21 @@ const Navbar = () => {
             </div>
             
             <div className={styles.navMenu}>
-              <a href="/" className={styles.navLink}>Home</a>
-              <a href="/trading" className={styles.navLink}>PAMM Account</a>
-              {/* <a href="/market" className={styles.navLink}>Market</a>
-              <a href="/pages" className={styles.navLink}>Pages</a>
-              <a href="/blog" className={styles.navLink}>Blog</a> */}
-              <a href="/contact" className={styles.navLink}>Contact</a>
-              <button className={styles.searchBtn}>
+              <a href="/" className={styles.navLink} style={{textDecoration: 'none'}}>Home</a>
+              <a href="/trading" className={styles.navLink} style={{textDecoration: 'none'}}>PAMM Account</a>
+              <a href="/market" className={styles.navLink} style={{textDecoration: 'none'}}>Join our Program</a>
+              {/* <a href="/pages" className={styles.navLink}>Pages</a> */}
+              <a href="/contact" className={styles.navLink} style={{textDecoration: 'none'}}>Contact</a>
+              {/* <a href="/blog" className={styles.navLink} style={{textDecoration: 'none'}}>Login</a>  */}
+              <button className={styles.create1} >
+                    Login
+                  </button>
+              <button className={styles.create} >
+                    Create Account
+                  </button>
+              {/* <button className={styles.searchBtn}>
                 <FaSearch />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

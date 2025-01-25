@@ -40,6 +40,7 @@
     border-radius: 4px;
     font-size: 14px;  /* Larger font */
     transition: background-color 0.2s;
+    
   }
   
   .loginBtn {
@@ -94,23 +95,47 @@
   }
   
   .navMenu {
+    font-family: var( --title-font);
     display: flex;
     align-items: center;
     gap: 20px;
+    text-decoration: none;
   }
   
   .navLink {
+    font-family: var( --title-font);
+    /* font-weight: bold; */
     color: #333;
-    font-size: 14px;
+    font-size: 15px;
     padding: 8px 22px;  /* Slightly larger padding */
     border-radius: 20px;
     border: 1px solid #e0e0e0;
     transition: all 0.2s;
   }
-  
+  .create{
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 17px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .create1{
+    /* border-color: #28a745; */
+    border-color: #28a745;
+    color: green;
+    border: 2px, solid, #28a745;
+    padding: 8px 17px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
   .navLink:hover {
-    background-color: #f8f9fa;
-    color: #28a745;
+    color: #f8f9fa;
+    background-color: #28a745;
   }
   
   .searchBtn {
