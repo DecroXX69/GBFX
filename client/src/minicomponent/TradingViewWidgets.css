@@ -1,0 +1,102 @@
+/* Animations */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Container Styling */
+  .tradingview-container {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(180deg, #eafaf1, #ffffff);
+    font-family: 'Arial', sans-serif;
+    position: relative;
+  }
+  
+  /* Heading Styling */
+  .tradingview-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .tradingview-heading h1 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin: 0;
+  }
+  
+  .tradingview-heading p {
+    font-size: 1.2rem;
+    color: #558b2f;
+    margin: 10px 0 0;
+  }
+  
+  /* Widget Container */
+  .tradingview-widgets {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px; /* Consistent gap for widgets */
+    animation: fadeInUp 1.5s ease-in-out;
+    position: relative;
+    z-index: 1;
+    padding: 0 16px; /* Matches the gap on the sides */
+  }
+  
+  /* Individual Widget Styling */
+  .tradingview-widget {
+    flex: 1 1 calc(50% - 16px); /* Adjusted for consistent gaps */
+    height: 550px;
+    border: 1px solid #c8e6c9;
+    background: #131722;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tradingview-widget:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Middle Gap Design */
+  .tradingview-gap {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px; /* Reduced width for consistency */
+    height: 100%;
+    background: linear-gradient(180deg, #a5d6a7, #c8e6c9);
+    border-radius: 4px; /* Slightly less round for a refined look */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 2s ease-in-out;
+    z-index: 0;
+  }
+  
+  /* Widget Responsive Design */
+  @media (max-width: 768px) {
+    .tradingview-widgets {
+      flex-direction: column;
+      gap: 10px;
+      padding: 0; /* No side padding for full width on small screens */
+    }
+  
+    .tradingview-widget {
+      flex: 1 1 100%;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .tradingview-gap {
+      display: none;
+    }
+  }
+  

@@ -17,7 +17,7 @@ import Testimonials from './minicomponent/Testimonials';
 import OurTeam from './minicomponent/Ourteam';
 import Pricing from './minicomponent/PricingPans';
 import ForexTaperWidget from './minicomponent/tradingview';
-
+import TradingViewEventsWidget from './minicomponent/ImportantNews';
 // import Signup from './components/Signup';
 import Home from './components/Home';
 function App() {
@@ -25,6 +25,8 @@ function App() {
     <div className="App">
       <Navbar />
       <HeroContainer />
+      <TradingViewEventsWidget />
+
       <TradingAccounts />
       <HowItWorks />
       <Marketspreads />
@@ -42,12 +44,10 @@ function App() {
      <Testimonials />
      <OurTeam />
      <Footer />
-    
 
 <Pricing/>
-
     </div>
-  );
+  );  
 }
 
 export default App;
