@@ -13,15 +13,21 @@ const ForexTaperWidget = () => {
       script.innerHTML = JSON.stringify({
         symbols: [
           { description: 'USD GOLD', proName: 'OANDA:XAUUSD' },
+          { description: 'S&P 500', proName: 'FOREXCOM:SPXUSD'},
           { description: 'EUR USD', proName: 'OANDA:EURUSD' },
           { description: 'AUS USD', proName: 'FX:AUDUSD' },
+          { description: 'ETH', proName: 'BINANCE:ETHUSDT' },
+          { description: 'DXY', proName: 'DXY' },
           { description: 'GBP USD', proName: 'FX:GBPUSD' },
-          { description: 'INR USD', proName: 'FX_IDC:INRUSD' },
+          { description: 'USD INR', proName: 'FX_IDC:USDINR' },
           { description: 'USD JPY', proName: 'FX:USDJPY' },
           { description: 'USD CAD', proName: 'FX:USDCAD' },
+            { description: 'NASDAQ 100', proName: 'NASDAQ:NDAQ' },
           { description: 'USD CHF', proName: 'FX:USDCHF' },
           { description: 'USD CNH', proName: 'FX:USDCNH' },
           { description: 'USD HKD', proName: 'FX:USDHKD' },
+          { description: 'BTC USDT', proName: 'BINANCE:BTCUSDT' },
+         
         ],
         showSymbolLogo: true,
         isTransparent: false,
