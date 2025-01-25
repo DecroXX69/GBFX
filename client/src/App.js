@@ -23,28 +23,26 @@ import Home from './components/Home';
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <HeroContainer />
-      <TradingAccounts />
-      <HowItWorks />
-      <Marketspreads />
+      <Home />
+      
+     
+      
       <Contact /> 
       {/* <Signup /> */}
       <Whoweare />
       
       <FAQSection />
-      <TradeCard />
+      
       <MarketSpreadsAndSwaps />
       
-      <About />
+      
       <ForexTaperWidget />
-      <NewsFeed />
-     <Testimonials />
-     <OurTeam />
-     <Footer />
+      
+     
+    
     
 
-<Pricing/>
+
 
     </div>
   );
