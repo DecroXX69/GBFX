@@ -115,7 +115,8 @@
   .create{
     background-color: #28a745;
     color: white;
-    border: none;
+    border: 2px, solid;
+    border-color: #28a745;
     padding: 8px 17px;
     font-size: 1.1rem;
     border-radius: 8px;

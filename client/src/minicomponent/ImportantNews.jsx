@@ -50,6 +50,7 @@ const TradingViewWidgets = () => {
     <div className="tradingview-container">
       <div className="tradingview-heading">
         <h1>Explore the Markets with Confidence</h1>
+        <div className='divider'></div>
         <p>Your ultimate guide to market events and screeners.</p>
       </div>
 

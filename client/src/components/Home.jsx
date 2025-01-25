@@ -3,8 +3,8 @@ import Navbar from './Navbar';
 import HeroContainer from '../minicomponent/HeroContainer';
 import TradingAccounts from '../minicomponent/TradingAccounts';
 import Whoweare from '../minicomponent/Whoweare';
-import TradeCard from '../minicomponent/TradeCard';
-import Marketspreads from '../minicomponent/Marketspreads';
+// import TradeCard from '../minicomponent/TradeCard';
+// import Marketspreads from '../minicomponent/Marketspreads';
 import Howitworks from '../minicomponent/Howitworks';
 import NewsFeed from '../minicomponent/NewsFeed';
 import Footer from './Footer';
@@ -17,7 +17,7 @@ const HomePage = () => {
         <HeroContainer />
         <TradingAccounts />
         <Whoweare />
-        <TradeCard />
+        {/* <TradeCard /> */}
         <ImportantNew/>
         <Howitworks />
         <NewsFeed />
