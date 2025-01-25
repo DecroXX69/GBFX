@@ -16,18 +16,18 @@ const TradingAccounts = () => {
     },
     {
       icon: <BarChart3 className={styles.icon} />,
-      title: "Overview Account",
+      title: "Meta Trader 4 Account",
       description: "The primary feature of a trading overview account is its ability to aggregate information from multiple accounts and"
     },
     {
       icon: <MonitorPlay className={styles.icon} />,
-      title: "Demo Account",
+      title: "Meta Trader 5 Account",
       description: "Trading demo accounts are particularly valuable for novice traders who are new to the world of investing."
     },
     {
       icon: <BookOpen className={styles.icon} />,
-      title: "Islamic Account",
-      description: "Islamic accounts also adhere to ethical guidelines that prohibit trading certain financial instruments deemed"
+      title: "PAMM Account",
+      description: "PAMM accounts also adhere to ethical guidelines that prohibit trading certain financial instruments deemed"
     }
   ];
 

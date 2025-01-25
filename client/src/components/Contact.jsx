@@ -75,8 +75,8 @@ const Contact = () => {
                     <img src={iconPhone} alt="Phone Icon" className="location-icon" />
                   </div>
                   <div className="detail-text">
-                    <p>0917749254</p>
-                    <p>0983888611</p>
+                    <p>9876543210</p>
+                    <p>0123456789</p>
                   </div>
                 </div>
 
@@ -85,8 +85,9 @@ const Contact = () => {
                     <img src={iconMail} alt="Mail Icon" className="location-icon" />
                   </div>
                   <div className="detail-text">
-                    <p>Bitrader@gmail.com</p>
-                    <p>hello@gmail.com</p>
+                    <p>gbfx.support@gmail.com</p>
+                    <p>gbfx.official@gmail.com</p>
+                    
                   </div>
                 </div>
 
