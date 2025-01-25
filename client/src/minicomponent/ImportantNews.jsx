@@ -36,8 +36,8 @@ const TradingViewWidgets = () => {
       options: {
         width: '100%',
         height: 550,
-        defaultColumn: 'overview',
-        defaultScreen: 'general',
+        defaultColumn: 'performance',
+        defaultScreen: 'top_gainers',
         market: 'forex',
         showToolbar: true,
         colorTheme: 'dark',

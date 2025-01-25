@@ -29,14 +29,14 @@ function App() {
       
       <Contact /> 
       {/* <Signup /> */}
-      <Whoweare />
+      
       
       <FAQSection />
       
-      <MarketSpreadsAndSwaps />
       
       
-      <ForexTaperWidget />
+      
+      
       
      
     

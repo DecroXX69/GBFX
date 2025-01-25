@@ -8,7 +8,7 @@ import Marketspreads from '../minicomponent/Marketspreads';
 import Howitworks from '../minicomponent/Howitworks';
 import NewsFeed from '../minicomponent/NewsFeed';
 import Footer from './Footer';
-
+import ImportantNew from '../minicomponent/ImportantNews';
 const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -18,7 +18,7 @@ const HomePage = () => {
         <TradingAccounts />
         <Whoweare />
         <TradeCard />
-        <Marketspreads />
+        <ImportantNew/>
         <Howitworks />
         <NewsFeed />
       </main>
