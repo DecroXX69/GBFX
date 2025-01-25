@@ -6,7 +6,8 @@ import './Contact.css';
 import iconPhone from '../assets/1.png';
 import iconMail from '../assets/2.png';
 import iconLocation from '../assets/3.png';
-
+import Navbar from './Navbar';
+import Footer from './Footer';
 const Contact = () => {
   const [inView, setInView] = useState({
     phone: false,
@@ -41,7 +42,10 @@ const Contact = () => {
 
   return (
     <>
+    <div className="big-container">
+      <Navbar />
       <div className="mini-hero">
+     
         <Container>
           <div className="breadcrumb-wrapper fade-in">
             <span className="home-link">Home</span>
@@ -131,6 +135,8 @@ const Contact = () => {
           </Col>
         </Row>
       </Container>
+      <Footer/>
+      </div>
     </>
   );
 };
