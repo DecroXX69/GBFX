@@ -13,7 +13,7 @@
   .divider{
     margin-top: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #28a745;
+    border-bottom: 1px solid var(--theme-color);
     width: 675px;
     position: relative;
     left: 37em;

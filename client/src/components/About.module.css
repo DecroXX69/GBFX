@@ -97,7 +97,7 @@
   .statIcon {
     width: 2rem;
     height: 2rem;
-    color: #059669;
+    color: var(--theme-color);
     margin: 0 auto 0.5rem;
   }
   
@@ -165,7 +165,7 @@
   }
   
   .active {
-    color: #059669;
+    color:var(--theme-color);
   }
   
   .mainTitle {
@@ -182,7 +182,7 @@
   .badge {
    /* Keeps the width as long as the content */
     background-color: #ecfdf5;
-    color: #059669;
+    color: var(--theme-color);
     border-radius: 9999px;
     font-size: 0.875rem;
     font-weight: 500;

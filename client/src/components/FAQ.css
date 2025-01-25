@@ -28,7 +28,7 @@ body {
   }
   
   .faq-tag {
-    background-color: #22c55e;
+    background-color: var(--theme-color);
     color: white;
     font-size: 0.875rem;
     padding: 0.5rem 1rem;

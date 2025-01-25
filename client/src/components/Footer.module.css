@@ -10,7 +10,7 @@
 }
 
 .subscribeWrapper {
-  background-color: #28a745;
+  background-color: var(--theme-color);
   padding: 2rem 0;
   margin-bottom: 3rem;
 }
