@@ -14,7 +14,7 @@
   .tradingview-container {
     width: 100%;
     padding: 20px;
-    background: linear-gradient(180deg, #eafaf1, #ffffff);
+    background: linear-gradient(180deg, #000000, #000000);
     font-family: 'Arial', sans-serif;
     position: relative;
   }
@@ -28,13 +28,13 @@
   
   .tradingview-heading h1 {
     font-size: 2.5rem;
-    color: #2e7d32;
+    color: #ffffff;
     margin: 0;
   }
   
   .tradingview-heading p {
     font-size: 1.2rem;
-    color: #558b2f;
+    color: #ffffff;
     margin: 10px 0 0;
   }
   
