@@ -18,38 +18,34 @@ import OurTeam from './minicomponent/Ourteam';
 import Pricing from './minicomponent/PricingPans';
 import ForexTaperWidget from './minicomponent/tradingview';
 
-import Signup from './components/Signup';
-import TradingViewEventsWidget from './minicomponent/ImportantNews';
 // import Signup from './components/Signup';
 import Home from './components/Home';
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <HeroContainer />
-      <TradingViewEventsWidget />
-
-      <TradingAccounts />
-      <HowItWorks />
-      <Marketspreads />
+      <Home />
+      
+     
+      
       <Contact /> 
-      <Signup />
+      {/* <Signup /> */}
       <Whoweare />
       
       <FAQSection />
-      <TradeCard />
+      
       <MarketSpreadsAndSwaps />
       
-      <About />
+      
       <ForexTaperWidget />
-      <NewsFeed />
-     <Testimonials />
-     <OurTeam />
-     <Footer />
+      
+     
+    
+    
 
-<Pricing/>
+
+
     </div>
-  );  
+  );
 }
 
 export default App;
