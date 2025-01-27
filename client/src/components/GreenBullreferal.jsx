@@ -1,7 +1,6 @@
 import React from 'react';
 import './GreenBull.css';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 const GreenBullPage = () => {
   const ranks = [
     {
@@ -71,7 +70,18 @@ const GreenBullPage = () => {
 
   return (
     <div className="gb-container">
-      
+      <div className="mini-hero">
+           
+              <Container>
+                <div className="breadcrumb-wrapper fade-in">
+                  <span className="home-link">Home</span>
+                  <span className="separator"> / </span>
+                  <span className="current-page">Join Our Program</span>
+                </div>
+                <h1 className="hero-title fade-in">Join Our Program</h1>
+              </Container>
+            </div>
+
       {/* Introduction Section */}
       <section className="section intro-section">
         <div className="container">

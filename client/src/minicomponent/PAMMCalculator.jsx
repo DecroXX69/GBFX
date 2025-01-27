@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./PammCalculator.css";
-import Footer from "../components/Footer";
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 const PAMMCalculator = () => {
   const [isSwitched, setIsSwitched] = useState(false);
   const [startingBalance, setStartingBalance] = useState("");

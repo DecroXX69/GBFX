@@ -6,8 +6,7 @@ import './Contact.css';
 import iconPhone from '../assets/1.png';
 import iconMail from '../assets/2.png';
 import iconLocation from '../assets/3.png';
-import Navbar from './Navbar';
-import Footer from './Footer';
+
 const Contact = () => {
   const [inView, setInView] = useState({
     phone: false,
