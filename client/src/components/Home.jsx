@@ -11,6 +11,7 @@ import Footer from './Footer';
 import ImportantNew from '../minicomponent/ImportantNews';
 import PammCalculator from '../minicomponent/PAMMCalculator';
 import PammLandingPage from '../minicomponent/PammAccount';
+import PammLanding from '../minicomponent/PammLanding';
 const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -21,6 +22,7 @@ const HomePage = () => {
         <Whoweare />
         <PammCalculator/>
         <PammLandingPage/>
+        <PammLanding/>
         {/* <TradeCard /> */}
         <ImportantNew/>
         <Howitworks />

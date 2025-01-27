@@ -14,7 +14,6 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./PammAccount.css";
-import Growth from "../assets/growth.png";
 
 const PammLandingPage = () => {
   useEffect(() => {
@@ -27,31 +26,7 @@ const PammLandingPage = () => {
   return (
     <div className="container pamm-container">
       {/* Hero Section */}
-      <section className="hero-section mb-5">
-        <div className="row align-items-center">
-          <div className="col-lg-6" data-aos="fade-right">
-            <h1 className="display-4 fw-bold mb-4">
-              Create your PAMM account today
-            </h1>
-            <p className="lead mb-4">
-              Grow your wealth with our innovative Percentage Allocation Money
-              Management solution tailored for investors and fund managers.
-            </p>
-            <button className="primary-btn">
-              Sign up Now <ArrowRight className="ms-2" />
-            </button>
-          </div>
-          <div className="col-lg-6 text-center" data-aos="fade-left">
-            <div className="animate-float">
-              <img
-                src={Growth}
-                alt="Trading Platform"
-                className="img-fluid rounded shadow"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Key Advantages Section */}
       <section className="advantages-section mb-5">
