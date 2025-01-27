@@ -71,7 +71,7 @@ const GreenBullPage = () => {
 
   return (
     <div className="gb-container">
-      <Navbar />
+      
       {/* Introduction Section */}
       <section className="section intro-section">
         <div className="container">
@@ -266,7 +266,7 @@ const GreenBullPage = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      
     </div>
   );
 };

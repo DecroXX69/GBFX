@@ -15,21 +15,20 @@ import PammLanding from '../minicomponent/PammLanding';
 const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      
       <main className="flex-grow">
         <HeroContainer />
-        <PammLanding/>
+       
         <TradingAccounts />
         <Whoweare />
-        <PammCalculator/>
-        <PammLandingPage/>
+        
        
         {/* <TradeCard /> */}
         <ImportantNew/>
         <Howitworks />
         <NewsFeed />
       </main>
-      <Footer />
+     
     </div>
   );
 };

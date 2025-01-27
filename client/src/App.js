@@ -1,7 +1,7 @@
+// App.js
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Footer from './components/Footer'; 
-import HowItWorks from './minicomponent/Howitworks';
-import Marketspreads from './minicomponent/Marketspreads';
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import HeroContainer from './minicomponent/HeroContainer';
 import TradingAccounts from './minicomponent/TradingAccounts';
@@ -10,7 +10,6 @@ import Whoweare from './minicomponent/Whoweare';
 import FAQSection from './components/FAQ';
 import TradeCard from './minicomponent/TradeCard';
 import MarketSpreadsAndSwaps from './minicomponent/MarketSpreadsAndSwaps';
- // Ensure correct import
 import About from './components/About';
 import NewsFeed from './minicomponent/NewsFeed';
 import Testimonials from './minicomponent/Testimonials';
@@ -20,36 +19,24 @@ import ForexTaperWidget from './minicomponent/tradingview';
 import GreenBullPage from './components/GreenBullreferal';
 import Pamm from './components/Pamm';
 import PAMMLanding from './minicomponent/PammLanding';
-
-// import Signup from './components/Signup';
+import PAMMCalculator from './minicomponent/PAMMCalculator';
 import Home from './components/Home';
+
 function App() {
   return (
-    <div className="App">
-      {/* <Home />
-      
-     
-      
-      <Contact />  */}
-      {/* <Signup /> */}
-      
-      
-      
-      {/* <FAQSection /> */}
-
-      
-      <GreenBullPage/>
-      <Pamm/>
-      <PAMMLanding/>
-      
-      
-     
-    
-    
-
-
-
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/trading" element={<Pamm />} />
+          <Route path="/market" element={<GreenBullPage />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/calculator" element={<PAMMCalculator />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

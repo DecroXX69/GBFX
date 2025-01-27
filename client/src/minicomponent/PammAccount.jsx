@@ -24,7 +24,7 @@ const PammLandingPage = () => {
   }, []);
 
   return (
-    <div className="container pamm-container">
+    <div className="container1 pamm-container">
       {/* Hero Section */}
       
 

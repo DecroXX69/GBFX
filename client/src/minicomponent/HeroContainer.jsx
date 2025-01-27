@@ -75,7 +75,7 @@ const TradingPage = () => {
   <div className="forex-widget-section">
         <ForexTaperWidget />
       </div>
-      <div className="hero-section">
+      <div className="hero-section2">
       
         {slides.map((slide, index) => (
           <div 

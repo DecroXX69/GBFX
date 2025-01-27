@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./PammCalculator.css";
-
+import Footer from "../components/Footer";
 const PAMMCalculator = () => {
   const [isSwitched, setIsSwitched] = useState(false);
   const [startingBalance, setStartingBalance] = useState("");
