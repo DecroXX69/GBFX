@@ -125,7 +125,7 @@
   }
   
   .create-account-btn {
-    background-color: #28a745;
+    background-color: var(--theme-color);
     color: white;
     border: none;
     padding: 12px 30px;
