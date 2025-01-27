@@ -30,7 +30,7 @@ const Navbar = () => {
               <div className={styles.logo}>
                 <span>GB</span>
               </div>
-              <div className={styles.brandName}>GBFX</div>
+              <div className={styles.brandName}>GBTrade</div>
             </div>
             
             <div className={styles.navMenu}>

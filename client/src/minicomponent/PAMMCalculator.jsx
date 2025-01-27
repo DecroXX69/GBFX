@@ -110,6 +110,7 @@ const PAMMCalculator = () => {
               <div className="switch-handle" />
             </div>
           </div>
+          <div></div>
 
           {isSwitched && (
             <AnimatePresence>

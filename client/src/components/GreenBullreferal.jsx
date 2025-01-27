@@ -58,7 +58,7 @@ const GreenBullPage = () => {
       reward: '$80,000'
     },
     {
-      rank: 'Red Diamond',
+      rank: 'Advisor',
       salesAmount: '$25,000',
       referralCommission: '35%',
       levelIncome: 'Yes',
@@ -73,11 +73,11 @@ const GreenBullPage = () => {
       {/* Introduction Section */}
       <section className="section intro-section">
         <div className="container">
-          <h1 className="main-title">Introduction to Green Bull (GBFX)</h1>
+          <h1 className="main-title">Introduction to Green Bull (GBTrade)</h1>
           <div className="intro-content">
-            <h2>What is Green Bull (GBFX)?</h2>
+            <h2>What is Green Bull (GBTrade)?</h2>
             <ul className="feature-list">
-              <li>Green Bull (GBFX) is a comprehensive platform designed for <strong>Forex trading</strong> and building a network of business partners.</li>
+              <li>Green Bull (GBTrade) is a comprehensive platform designed for <strong>Forex trading</strong> and building a network of business partners.</li>
               <li>It allows you to earn money through <strong>currency trading</strong> and by creating a team.</li>
               <li>Perfect for beginners and experienced traders alike.</li>
               <li><strong>Joining Fee</strong>: Starting from <strong>$100</strong> up to <strong>unlimited</strong>, with limitless earning opportunities.</li>
@@ -121,8 +121,8 @@ const GreenBullPage = () => {
           <h2>Magic Income (Trading Share Commission)</h2>
           <div className="commission-content">
             <ul className="feature-list">
-              <li>Earn commission by <strong>referring others</strong> to join GBFX and helping your team generate sales.</li>
-              <li>There are <strong>7 defined ranks</strong> in the GBFX plan, and your income grows as you move up.</li>
+              <li>Earn commission by <strong>referring others</strong> to join GBTrade and helping your team generate sales.</li>
+              <li>There are <strong>7 defined ranks</strong> in the GBTrade plan, and your income grows as you move up.</li>
             </ul>
             
             <div className="table-responsive">
@@ -222,11 +222,11 @@ const GreenBullPage = () => {
           <div className="terms-content">
             <div className="key-conditions">
               <h3>Key Conditions to Keep in Mind:</h3>
-              <ol>
+              <ul>
                 <li><strong>Minimum Withdrawal</strong>: $10 (must be in multiples of $10).</li>
                 <li><strong>Withdrawal Days</strong>: Saturday and Sunday.</li>
                 <li><strong>Processing Time</strong>: Withdrawal requests are processed within <strong>24–48 hours</strong>.</li>
-              </ol>
+              </ul>
             </div>
 
             <div className="business-maintenance">
@@ -252,7 +252,7 @@ const GreenBullPage = () => {
       {/* Why Join Section */}
       <section className="section why-join-section">
         <div className="container">
-          <h2>Why Join Green Bull (GBFX)?</h2>
+          <h2>Why Join Green Bull (GBTrade)?</h2>
           <div className="reasons-content">
             <h3>Reasons to Join:</h3>
             <ol className="feature-list">
