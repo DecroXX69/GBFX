@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styles from './Footer.module.css';
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaTelegram, FaInstagram, FaYoutube } from 'react-icons/fa';
 import GBFX from '../assets/GBFX.png';
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -37,14 +38,18 @@ const Footer = () => {
               <FaFacebook size={20} />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <FaTwitter size={20} />
+              <FaXTwitter size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={20} />
+            <a href="https://Telegram.com" target="_blank" rel="noopener noreferrer">
+              <FaTelegram size={20} />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={20} />
-            </a>
+              </a>
+              <a href="https://Youtube.com" target="_blank" rel="noopener noreferrer">
+              <FaYoutube size={20} />
+              </a>
+            
           </div>
         </div>
 
