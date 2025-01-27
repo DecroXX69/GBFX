@@ -36,7 +36,7 @@ const Navbar = () => {
             <div className={styles.navMenu}>
               <a href="/" className={styles.navLink} style={{textDecoration: 'none'}}>Home</a>
               <a href="/trading" className={styles.navLink} style={{textDecoration: 'none'}}>PAMM Account</a>
-              <a href="/market" className={styles.navLink} style={{textDecoration: 'none'}}>Join our Program</a>
+              <a href="/market" className={styles.navLink} style={{textDecoration: 'none'}}>Join Our Program</a>
               {/* <a href="/pages" className={styles.navLink}>Pages</a> */}
               <a href="/contact" className={styles.navLink} style={{textDecoration: 'none'}}>Contact</a>
               {/* <a href="/blog" className={styles.navLink} style={{textDecoration: 'none'}}>Login</a>  */}
