@@ -1,6 +1,7 @@
 import React from 'react';
 import './GreenBull.css';
-
+import Navbar from './Navbar';
+import Footer from './Footer';
 const GreenBullPage = () => {
   const ranks = [
     {
@@ -70,6 +71,7 @@ const GreenBullPage = () => {
 
   return (
     <div className="gb-container">
+      <Navbar />
       {/* Introduction Section */}
       <section className="section intro-section">
         <div className="container">
@@ -264,6 +266,7 @@ const GreenBullPage = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

@@ -18,28 +18,29 @@ import OurTeam from './minicomponent/Ourteam';
 import Pricing from './minicomponent/PricingPans';
 import ForexTaperWidget from './minicomponent/tradingview';
 import GreenBullPage from './components/GreenBullreferal';
-
+import Pamm from './components/Pamm';
+import PAMMLanding from './minicomponent/PammLanding';
 
 // import Signup from './components/Signup';
 import Home from './components/Home';
 function App() {
   return (
     <div className="App">
-      <Home />
+      {/* <Home />
       
      
       
-      <Contact /> 
+      <Contact />  */}
       {/* <Signup /> */}
       
       
       
-      <FAQSection />
+      {/* <FAQSection /> */}
 
       
       <GreenBullPage/>
-      
-      
+      <Pamm/>
+      <PAMMLanding/>
       
       
      
