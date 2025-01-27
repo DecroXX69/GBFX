@@ -142,9 +142,9 @@ const GreenBullPage = () => {
                 <thead>
                   <tr>
                     <th>Rank</th>
-                    <th>Sales Account</th>
+                    <th>Self Account</th>
                     <th>Self Percentage</th>
-                    <th>Differencial</th>
+                    <th>Differential</th>
                     <th>Business Requirement</th>
                     <th>Ratio in 3 legs</th>
                   </tr>

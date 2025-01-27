@@ -56,10 +56,11 @@
   /* Main Navigation Styles */
   .mainNav {
     background-color: #fff;
-    height: 90px;  /* Increased height */
+    height: 90px;
     border-bottom: 1px solid #eee;
-    margin-top: 1px;  /* Small gap from top navbar */
-  }
+    margin-top: 1px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow when scrolling */
+}
   
   .mainNavContent {
     height: 100%;
