@@ -22,7 +22,7 @@ const ForexTaperWidget = () => {
           { description: 'USD INR', proName: 'FX_IDC:USDINR' },
           { description: 'USD JPY', proName: 'FX:USDJPY' },
           { description: 'USD CAD', proName: 'FX:USDCAD' },
-            { description: 'NASDAQ 100', proName: 'NASDAQ:NDAQ' },
+          { description: 'NASDAQ 100', proName: 'NASDAQ:NDAQ' },
           { description: 'USD CHF', proName: 'FX:USDCHF' },
           { description: 'USD CNH', proName: 'FX:USDCNH' },
           { description: 'USD HKD', proName: 'FX:USDHKD' },

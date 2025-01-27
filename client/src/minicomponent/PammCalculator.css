@@ -1,0 +1,233 @@
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto; /* Allows dynamic height */
+  background-color: #f9f9f9;
+  font-family: 'Roboto', Arial, sans-serif;
+  padding: 16px;
+  box-sizing: border-box;
+  transition: min-height 0.3s ease; /* Smooth transition for height changes */
+}
+
+.calculator-container.compact {
+  min-height: 50vh; /* Smaller height when no results */
+}
+
+.calculator-container.expanded {
+  min-height: 100vh; /* Full height when results are displayed */
+}
+
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-header {
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333333;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333333;
+  outline: none;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+}
+
+.switch-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.switch {
+  width: 52px;
+  height: 26px;
+  background-color: #ccc;
+  border-radius: 13px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.switch-on {
+  background-color: #4caf50;
+}
+
+.switch-handle {
+  width: 22px;
+  height: 22px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s ease;
+}
+
+.switch-on .switch-handle {
+  left: 28px;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.table-container {
+  overflow-x: hidden; /* Removes horizontal scrolling */
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  animation: slideUp 0.5s ease-out;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  white-space: normal; /* Allows text to wrap inside cells */
+  word-wrap: break-word; /* Ensures long text breaks properly */
+}
+
+.table th {
+  background-color: #4caf50;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+  animation: hoverEffect 0.3s ease-in-out;
+}
+
+@keyframes hoverEffect {
+  from {
+    background-color: #f9f9f9;
+  }
+  to {
+    background-color: #f1f1f1;
+  }
+}
+
+/* Ensure table adjusts on larger screens */
+@media (min-width: 769px) {
+  .card {
+    max-width: none; /* Allow the card to expand fully on desktop */
+    width: auto;
+  }
+
+  .table {
+    table-layout: fixed; /* Ensures columns have consistent widths */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    padding: 16px;
+    max-width: 90%;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .input {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .table th, .table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .table-container {
+    overflow-x: auto; /* Retain horizontal scrolling for small screens */
+  }
+}

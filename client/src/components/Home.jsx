@@ -9,6 +9,7 @@ import Howitworks from '../minicomponent/Howitworks';
 import NewsFeed from '../minicomponent/NewsFeed';
 import Footer from './Footer';
 import ImportantNew from '../minicomponent/ImportantNews';
+import PammCalculator from '../minicomponent/PAMMCalculator';
 const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -17,6 +18,7 @@ const HomePage = () => {
         <HeroContainer />
         <TradingAccounts />
         <Whoweare />
+        <PammCalculator/>
         {/* <TradeCard /> */}
         <ImportantNew/>
         <Howitworks />
