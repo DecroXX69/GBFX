@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './GreenBull.css';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Table } from 'react-bootstrap';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const GreenBullPage = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const ranks = [
     {
       rank: 'Beginner',
@@ -71,19 +78,18 @@ const GreenBullPage = () => {
   return (
     <div className="gb-container">
       <div className="mini-hero">
-           
-              <Container>
-                <div className="breadcrumb-wrapper fade-in">
-                  <span className="home-link">Home</span>
-                  <span className="separator"> / </span>
-                  <span className="current-page">Join Our Program</span>
-                </div>
-                <h1 className="hero-title fade-in">Join Our Program</h1>
-              </Container>
-            </div>
+        <Container>
+          <div className="breadcrumb-wrapper fade-in">
+            <span className="home-link">Home</span>
+            <span className="separator"> / </span>
+            <span className="current-page">Join Our Program</span>
+          </div>
+          <h1 className="hero-title fade-in">Join Our Program</h1>
+        </Container>
+      </div>
 
       {/* Introduction Section */}
-      <section className="section intro-section">
+      <section className="section intro-section" data-aos="fade-up">
         <div className="container">
           <h1 className="main-title">Introduction to Green Bull <span>(GBTrade)</span></h1>
           <div className="intro-content">
@@ -97,19 +103,19 @@ const GreenBullPage = () => {
             
             <div className="income-types">
               <h3>Types of Income:</h3>
-              <ol>
+              <ul className="feature-list">
                 <li>Trading Profit</li>
                 <li>Magic Income (Trading Share Commission)</li>
                 <li>Permanent Rewards</li>
                 <li>Royalty Income</li>
-              </ol>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* Trading Profit Section */}
-      <section className="section trading-section">
+      <section className="section trading-section" data-aos="fade-up">
         <div className="container">
           <h2>How Does Trading Profit Work?</h2>
           <div className="trading-content">
@@ -128,7 +134,7 @@ const GreenBullPage = () => {
       </section>
 
       {/* Magic Income Section */}
-      <section className="section magic-income-section">
+      <section className="section magic-income-section" data-aos="fade-up">
         <div className="container">
           <h2>Magic Income (Trading Share Commission)</h2>
           <div className="commission-content">
@@ -138,7 +144,7 @@ const GreenBullPage = () => {
             </ul>
             
             <div className="table-responsive">
-              <table className="table table-striped">
+              <Table striped bordered hover>
                 <thead>
                   <tr>
                     <th>Rank</th>
@@ -146,7 +152,7 @@ const GreenBullPage = () => {
                     <th>Self Percentage</th>
                     <th>Differential</th>
                     <th>Business Requirement</th>
-                    <th>Ratio in 3 legs</th>
+                    <th>Ratio in 3 Legs</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -161,7 +167,7 @@ const GreenBullPage = () => {
                     </tr>
                   ))}
                 </tbody>
-              </table>
+              </Table>
             </div>
             <p className="note"><strong>Note</strong>: The weakest leg automatically strengthens as investments grow.</p>
           </div>
@@ -169,12 +175,12 @@ const GreenBullPage = () => {
       </section>
 
       {/* Permanent Rewards Section */}
-      <section className="section rewards-section">
+      <section className="section rewards-section" data-aos="fade-up">
         <div className="container">
           <h2>Permanent Rewards</h2>
           <h3>Achieve Milestones, Earn Cash Rewards</h3>
           <div className="table-responsive">
-            <table className="table table-striped">
+            <Table striped bordered hover>
               <thead>
                 <tr>
                   <th>Rank</th>
@@ -189,13 +195,13 @@ const GreenBullPage = () => {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </Table>
           </div>
         </div>
       </section>
 
       {/* Royalty Income Section */}
-      <section className="section royalty-section">
+      <section className="section royalty-section" data-aos="fade-up">
         <div className="container">
           <h2>How Do You Earn Royalty Income?</h2>
           <div className="royalty-content">
@@ -206,7 +212,7 @@ const GreenBullPage = () => {
             </ul>
             
             <div className="table-responsive">
-              <table className="table table-striped">
+              <Table striped bordered hover>
                 <thead>
                   <tr>
                     <th>Rank</th>
@@ -221,14 +227,14 @@ const GreenBullPage = () => {
                     </tr>
                   ))}
                 </tbody>
-              </table>
+              </Table>
             </div>
           </div>
         </div>
       </section>
 
       {/* Terms and Conditions Section */}
-      <section className="section terms-section">
+      <section className="section terms-section" data-aos="fade-up">
         <div className="container">
           <h2>Terms and Conditions</h2>
           <div className="terms-content">
@@ -262,21 +268,20 @@ const GreenBullPage = () => {
       </section>
 
       {/* Why Join Section */}
-      <section className="section why-join-section">
+      <section className="section why-join-section" data-aos="fade-up">
         <div className="container">
           <h2>Why Join Green Bull (GBTrade)?</h2>
           <div className="reasons-content">
             <h3>Reasons to Join:</h3>
-            <ol className="feature-list">
+            <ul className="feature-list">
               <li><strong>Unlimited earning potential</strong> through Forex trading and networking.</li>
               <li>Attractive rewards and royalty income for consistent performers.</li>
               <li>Professional support and regular updates to help you grow.</li>
               <li>Transparent and easy-to-understand system with timely payments.</li>
-            </ol>
+            </ul>
           </div>
         </div>
       </section>
-      
     </div>
   );
 };

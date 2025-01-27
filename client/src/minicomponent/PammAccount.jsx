@@ -49,7 +49,7 @@ const PammLandingPage = () => {
       </section>
 
       {/* Why Choose PAMM Section */}
-      <section className="why-choose-pamm-section mb-5">
+      <section className="why-choose-pamm mb-5">
         <h2 className="text-center mb-5 fw-bold display-5" data-aos="fade-up">
           Why Choose PAMM Accounts?
         </h2>
