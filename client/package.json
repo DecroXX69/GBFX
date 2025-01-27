@@ -6,6 +6,7 @@
     "@craco/craco": "^7.1.0",
     "@popperjs/core": "^2.11.8",
     "@shadcn/ui": "^0.0.4",
+    "aos": "^2.3.4",
     "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
