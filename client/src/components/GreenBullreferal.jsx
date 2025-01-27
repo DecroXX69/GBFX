@@ -26,7 +26,7 @@ const GreenBullPage = () => {
       rank: 'Silver',
       salesAmount: '$1,000',
       referralCommission: '23%',
-      levelIncome: 'Yes',
+      levelIncome: '3%',
       businessRequirement: '$30,000',
       legRatio: '40:40:20',
       reward: '$1,000'
@@ -35,7 +35,7 @@ const GreenBullPage = () => {
       rank: 'Gold',
       salesAmount: '$2,000',
       referralCommission: '26%',
-      levelIncome: 'Yes',
+      levelIncome: '3%',
       businessRequirement: '$100,000',
       legRatio: '40:40:20',
       reward: '$4,000'
@@ -44,7 +44,7 @@ const GreenBullPage = () => {
       rank: 'Diamond',
       salesAmount: '$5,000',
       referralCommission: '29%',
-      levelIncome: 'Yes',
+      levelIncome: '3%',
       businessRequirement: '$500,000',
       legRatio: '40:40:20',
       reward: '$20,000'
@@ -53,7 +53,7 @@ const GreenBullPage = () => {
       rank: 'Platinum',
       salesAmount: '$10,000',
       referralCommission: '32%',
-      levelIncome: 'Yes',
+      levelIncome: '3%',
       businessRequirement: '$2,000,000',
       legRatio: '40:40:20',
       reward: '$80,000'
@@ -62,7 +62,7 @@ const GreenBullPage = () => {
       rank: 'Advisor',
       salesAmount: '$25,000',
       referralCommission: '35%',
-      levelIncome: 'Yes',
+      levelIncome: '3%',
       businessRequirement: '$10,000,000',
       legRatio: '40:40:20',
       reward: '$400,000'
@@ -132,11 +132,11 @@ const GreenBullPage = () => {
                 <thead>
                   <tr>
                     <th>Rank</th>
-                    <th>Sales Amount</th>
-                    <th>Referral Commission</th>
-                    <th>Level Income</th>
+                    <th>Sales Account</th>
+                    <th>Self Percentage</th>
+                    <th>Differencial</th>
                     <th>Business Requirement</th>
-                    <th>Leg Ratio</th>
+                    <th>Ratio in 3 legs</th>
                   </tr>
                 </thead>
                 <tbody>

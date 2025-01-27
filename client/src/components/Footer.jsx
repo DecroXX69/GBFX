@@ -17,7 +17,8 @@ const Footer = () => {
       <div className={styles.subscribeWrapper}>
         <div className={styles.container}>
           <div className={styles.subscribe}>
-            <h2>Subscribe for latest update</h2>
+            <h2 style={{color:"white"
+            }}>Subscribe for latest update</h2>
             <div className={styles.subscribeForm}>
               <input type="email" placeholder="Email Address" />
               <button>Subscribe →</button>
@@ -29,16 +30,15 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
-            <h3>About Us</h3>
-            <a href="/who-we-are">Who we are</a>
-            <a href="/awards">Awards</a>
-            <a href="/principals">Principals</a>
-            <a href="/partnership">Partnership</a>
-            <a href="/contact-us">Contact us</a>
-            <a href="/careers">Careers</a>
-            <a href="/management">Management</a>
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">PAMM Account</a>
+            <a href="#">Join Our Program</a>
+            <a href="#">Contact</a>
+            <a href="#">Login</a>
+            <a href="#">Create Account</a>
           </div>
-
+{/* 
           <div className={styles.footerSection}>
             <h3>Platforms</h3>
             <a href="/forex">Forex</a>
@@ -48,9 +48,9 @@ const Footer = () => {
             <a href="/spot-metals">Spot Metals</a>
             <a href="/energies">Energies</a>
             <a href="/metatrader-5">MetaTrader 5</a>
-          </div>
+          </div> */}
 
-          <div className={styles.footerSection}>
+          {/* <div className={styles.footerSection}>
             <h3>Trading Tools</h3>
             <a href="/fxt-navigator">FXT Navigator</a>
             <a href="/trading-central">Trading Central</a>
@@ -59,9 +59,9 @@ const Footer = () => {
             <a href="/api-trading">API Trading</a>
             <a href="/vps">VPS</a>
             <a href="/cdf-rollover">CDF Rollover</a>
-          </div>
+          </div> */}
 
-          <div className={styles.footerSection}>
+          {/* <div className={styles.footerSection}>
             <h3>Support</h3>
             <a href="/legal-information">Legal Information</a>
             <a href="/privacy-policy">Privacy Policy</a>
@@ -70,7 +70,7 @@ const Footer = () => {
             <a href="/complaints">Complaints Procedure</a>
             <a href="/news">Company News</a>
             <a href="/videos">Trading Videos</a>
-          </div>
+          </div> */}
 
           <div className={styles.appSection}>
             <div className={styles.logo}>

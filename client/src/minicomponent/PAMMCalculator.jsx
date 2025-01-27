@@ -9,57 +9,114 @@ const PAMMCalculator = () => {
   const [gainPerMonths, setGainPerMonths] = useState("");
   const [additionalDeposit, setAdditionalDeposit] = useState("");
   const [withdrawalPerMonths, setWithdrawalPerMonths] = useState("");
+  const [performanceFee, setPerformanceFee] = useState("");
   const [calculatedResults, setCalculatedResults] = useState([]);
+  const [errors, setErrors] = useState({
+    startingBalance: "",
+    months: "",
+    gainPerMonths: "",
+    performanceFee: "",
+  });
+
+  const validateInputs = () => {
+    const newErrors = {
+      startingBalance: "",
+      months: "",
+      gainPerMonths: "",
+      performanceFee: "",
+    };
+    let isValid = true;
+
+    if (!startingBalance || parseFloat(startingBalance) <= 0) {
+      newErrors.startingBalance = "Starting balance must be a positive number";
+      isValid = false;
+    }
+
+    if (!Months || parseInt(Months) <= 0) {
+      newErrors.months = "Months must be a positive number";
+      isValid = false;
+    }
+
+    if (!gainPerMonths || parseFloat(gainPerMonths) <= 0) {
+      newErrors.gainPerMonths = "Gain per month must be a positive number";
+      isValid = false;
+    }
+
+    if (isSwitched && performanceFee && (parseFloat(performanceFee) < 0 || parseFloat(performanceFee) > 100)) {
+      newErrors.performanceFee = "Performance fee must be between 0 and 100";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
 
   const handleCalculate = () => {
-    if (startingBalance && Months && gainPerMonths) {
-      const results = [];
-      let currentBalance = parseFloat(startingBalance);
-      let totalProfit = 0;
-      let totalGain = 0;
+    if (!validateInputs()) return;
 
-      for (let i = 1; i <= Months; i++) {
-        const startingPeriodBalance = currentBalance;
-        const gain = currentBalance * (parseFloat(gainPerMonths) / 100);
-        currentBalance += gain;
+    const results = [];
+    let currentBalance = parseFloat(startingBalance);
+    let totalProfit = 0;
+    let totalGain = 0;
 
-        // Advanced mode adjustments
-        if (isSwitched) {
-          if (additionalDeposit) currentBalance += parseFloat(additionalDeposit);
-          if (withdrawalPerMonths) currentBalance -= parseFloat(withdrawalPerMonths);
-        }
+    for (let i = 1; i <= Months; i++) {
+      const startingPeriodBalance = currentBalance;
+      const gain = currentBalance * (parseFloat(gainPerMonths) / 100);
+      
+      // Calculate performance fee if enabled
+      let performanceFeeAmount = 0;
+      if (isSwitched && performanceFee && gain > 0) {
+        performanceFeeAmount = gain * (parseFloat(performanceFee) / 100);
+      }
+      
+      // Add gain and subtract performance fee
+      currentBalance += gain - performanceFeeAmount;
 
-        totalProfit += gain;
-        totalGain = currentBalance - parseFloat(startingBalance);
-
-        results.push({
-          Months: i,
-          startingBalance: startingPeriodBalance.toFixed(2),
-          endingBalance: currentBalance.toFixed(2),
-          gain: gain.toFixed(2),
-          totalProfit: totalProfit.toFixed(2),
-          totalGain: totalGain.toFixed(2),
-          withdrawal: isSwitched ? parseFloat(withdrawalPerMonths || 0).toFixed(2) : "N/A",
-        });
+      // Advanced mode adjustments
+      if (isSwitched) {
+        if (additionalDeposit) currentBalance += parseFloat(additionalDeposit);
+        if (withdrawalPerMonths) currentBalance -= parseFloat(withdrawalPerMonths);
       }
 
-      setCalculatedResults(results);
+      totalProfit += gain - performanceFeeAmount;
+      totalGain = currentBalance - parseFloat(startingBalance);
+
+      // Calculate average daily return (simplified to 30 days per month)
+      const averageDailyReturn = (gain - performanceFeeAmount) / 30;
+
+      const resultRow = {
+        Months: i,
+        startingBalance: startingPeriodBalance.toFixed(2),
+        endingBalance: currentBalance.toFixed(2),
+        gain: gain.toFixed(2),
+        totalProfit: totalProfit.toFixed(2),
+        totalGain: totalGain.toFixed(2),
+        averageDailyReturn: averageDailyReturn.toFixed(2),
+      };
+
+      // Only add advanced mode fields if they have values
+      if (isSwitched) {
+        if (performanceFee) {
+          resultRow.performanceFee = performanceFeeAmount.toFixed(2);
+        }
+        if (withdrawalPerMonths) {
+          resultRow.withdrawal = parseFloat(withdrawalPerMonths).toFixed(2);
+        }
+      }
+
+      results.push(resultRow);
     }
+
+    setCalculatedResults(results);
   };
 
   return (
-    <div
-    className={`calculator-container ${
-      calculatedResults.length > 0 ? "expanded" : "compact"
-    }`}
-  >
-      {/* Card */}
+    <div className={`calculator-container ${calculatedResults.length > 0 ? "expanded" : "compact"}`}>
       <div className="card">
         <header className="card-header">
           <h2 className="card-title">PAMM Compound Calculator</h2>
         </header>
         <div className="card-content">
-          {/* Input Fields */}
           <div className="form-group">
             <label htmlFor="starting-balance" className="label">
               Starting Balance:
@@ -72,6 +129,7 @@ const PAMMCalculator = () => {
               value={startingBalance}
               onChange={(e) => setStartingBalance(e.target.value)}
             />
+            {errors.startingBalance && <span className="error">{errors.startingBalance}</span>}
           </div>
           <div className="form-group">
             <label htmlFor="Months" className="label">
@@ -85,22 +143,23 @@ const PAMMCalculator = () => {
               value={Months}
               onChange={(e) => setMonths(e.target.value)}
             />
+            {errors.months && <span className="error">{errors.months}</span>}
           </div>
           <div className="form-group">
             <label htmlFor="gain-per-Months" className="label">
-              Gain per Months (%):
+              Gain per Month (%):
             </label>
             <input
               type="number"
               id="gain-per-Months"
               className="input"
-              placeholder="Enter gain per Months (%)"
+              placeholder="Enter gain per Month (%)"
               value={gainPerMonths}
               onChange={(e) => setGainPerMonths(e.target.value)}
             />
+            {errors.gainPerMonths && <span className="error">{errors.gainPerMonths}</span>}
           </div>
 
-          {/* Advanced Mode Inputs */}
           <div className="form-group switch-group">
             <label className="label">Enable Advanced Mode:</label>
             <div
@@ -110,7 +169,6 @@ const PAMMCalculator = () => {
               <div className="switch-handle" />
             </div>
           </div>
-          <div></div>
 
           {isSwitched && (
             <AnimatePresence>
@@ -121,27 +179,41 @@ const PAMMCalculator = () => {
                 className="advanced-mode"
               >
                 <div className="form-group">
+                  <label htmlFor="performance-fee" className="label">
+                    Performance Fee (%):
+                  </label>
+                  <input
+                    type="number"
+                    id="performance-fee"
+                    className="input"
+                    placeholder="Enter performance fee percentage"
+                    value={performanceFee}
+                    onChange={(e) => setPerformanceFee(e.target.value)}
+                  />
+                  {errors.performanceFee && <span className="error">{errors.performanceFee}</span>}
+                </div>
+                <div className="form-group">
                   <label htmlFor="additional-deposit" className="label">
-                    Additional Deposit per Months:
+                    Additional Deposit per Month:
                   </label>
                   <input
                     type="number"
                     id="additional-deposit"
                     className="input"
-                    placeholder="Enter deposit per Months"
+                    placeholder="Enter deposit per Month"
                     value={additionalDeposit}
                     onChange={(e) => setAdditionalDeposit(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
                   <label htmlFor="withdrawal-per-Months" className="label">
-                    Withdrawal per Months:
+                    Withdrawal per Month:
                   </label>
                   <input
                     type="number"
                     id="withdrawal-per-Months"
                     className="input"
-                    placeholder="Enter withdrawal per Months"
+                    placeholder="Enter withdrawal per Month"
                     value={withdrawalPerMonths}
                     onChange={(e) => setWithdrawalPerMonths(e.target.value)}
                   />
@@ -150,12 +222,10 @@ const PAMMCalculator = () => {
             </AnimatePresence>
           )}
 
-          {/* Button */}
           <button className="button" onClick={handleCalculate}>
             Calculate
           </button>
 
-          {/* Results Table */}
           <AnimatePresence>
             {calculatedResults.length > 0 && (
               <motion.div
@@ -170,9 +240,11 @@ const PAMMCalculator = () => {
                       <th>Starting Balance</th>
                       <th>Ending Balance</th>
                       <th>Gain</th>
+                      {isSwitched && performanceFee && <th>Performance Fee</th>}
+                      {isSwitched && withdrawalPerMonths && <th>Withdrawal</th>}
                       <th>Total Profit</th>
                       <th>Total Gain</th>
-                      <th>Withdrawal</th>
+                      <th>Average Daily Return</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -182,9 +254,11 @@ const PAMMCalculator = () => {
                         <td>${result.startingBalance}</td>
                         <td>${result.endingBalance}</td>
                         <td>${result.gain}</td>
+                        {isSwitched && performanceFee && <td>${result.performanceFee}</td>}
+                        {isSwitched && withdrawalPerMonths && <td>${result.withdrawal}</td>}
                         <td>${result.totalProfit}</td>
                         <td>${result.totalGain}</td>
-                        <td>${result.withdrawal}</td>
+                        <td>${result.averageDailyReturn}</td>
                       </tr>
                     ))}
                   </tbody>

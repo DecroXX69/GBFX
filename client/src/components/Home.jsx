@@ -18,11 +18,12 @@ const HomePage = () => {
       <Navbar />
       <main className="flex-grow">
         <HeroContainer />
+        <PammLanding/>
         <TradingAccounts />
         <Whoweare />
         <PammCalculator/>
         <PammLandingPage/>
-        <PammLanding/>
+       
         {/* <TradeCard /> */}
         <ImportantNew/>
         <Howitworks />

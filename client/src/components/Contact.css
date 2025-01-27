@@ -150,7 +150,7 @@
     border-radius: 20px;
   }
   
-  .contact-submit-btn {
+  .contact-submit-btn1 {
     width: 100%;
     padding: 15px;
     background-color: #22823A;
@@ -160,8 +160,8 @@
     margin-top: 20px;
   }
   
-  .contact-submit-btn:hover {
-    background-color: #00b86d;
+  .contact-submit-btn1:hover {
+    background-color: #22823A;
   }
   
   @media (max-width: 991px) {
