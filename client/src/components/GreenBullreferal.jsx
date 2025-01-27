@@ -73,7 +73,7 @@ const GreenBullPage = () => {
       {/* Introduction Section */}
       <section className="section intro-section">
         <div className="container">
-          <h1 className="main-title">Introduction to Green Bull (GBTrade)</h1>
+          <h1 className="main-title">Introduction to Green Bull <span>(GBTrade)</span></h1>
           <div className="intro-content">
             <h2>What is Green Bull (GBTrade)?</h2>
             <ul className="feature-list">
