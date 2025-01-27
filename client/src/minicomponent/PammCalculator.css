@@ -18,6 +18,10 @@
   min-height: 100vh; /* Full height when results are displayed */
 }
 
+.error {
+  color: red;
+  font-size: 12px;
+}
 
 .card {
   width: 100%;
@@ -155,14 +159,26 @@
   animation: slideUp 0.5s ease-out;
 }
 
+.table tr:nth-child(odd) {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
+.table tr:nth-child(even) {
+  background-color: #b8b8b8; /* Light grey background for even rows */
+}
+
+.table tr:hover {
+  background-color: #e0e0e0; /* Slightly darker grey for hover effect */
+}
+
 .table th, .table td {
   border: 1px solid #ddd;
   padding: 12px;
   font-size: 14px;
   text-align: center;
   transition: background-color 0.3s ease;
-  white-space: normal; /* Allows text to wrap inside cells */
-  word-wrap: break-word; /* Ensures long text breaks properly */
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .table th {
@@ -171,14 +187,6 @@
   font-weight: bold;
 }
 
-.table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.table tr:hover {
-  background-color: #f1f1f1;
-  animation: hoverEffect 0.3s ease-in-out;
-}
 
 @keyframes hoverEffect {
   from {
