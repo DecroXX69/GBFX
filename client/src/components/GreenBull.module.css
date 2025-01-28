@@ -1,6 +1,5 @@
-/* GreenBull.css */
+/* GreenBull.module.css */
 
-/* Root Variables */
 :root {
   --primary-green: #00A86B;
   --dark-green: #006B44;
@@ -13,28 +12,27 @@
   --warning-text: #856404;
   --dark-gray: #6c757d;
   --accent-gray: #e9ecef;
-  --highlight-color: #28a745; /* A deeper green to contrast with lighter sections */
+  --highlight-color: #28a745;
 }
 
-/* Base Styles */
-.gb-container {
+.gbContainer {
   font-family: 'Arial', sans-serif;
   color: var(--black);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* Section Styles */
 .section {
   padding: 4rem 0;
   transition: background-color 0.3s ease;
+  animation: fadeIn 0.8s ease-out;
 }
 
-.section:nth-child(even) {
+.section:global(:nth-child(even)) {
   background-color: var(--light-gray);
 }
 
-.section:nth-child(odd) {
+.section:global(:nth-child(odd)) {
   background-color: var(--accent-gray);
 }
 
@@ -44,10 +42,8 @@
   padding: 0 1rem;
 }
 
-/* Typography */
-.main-title {
-  color: var(--light-gray);
-  background-color: var(--theme-color);
+.mainTitle {
+  color: var(--theme-color);
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -55,30 +51,25 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   display: inline-block;
-  text-align: center;
 }
 
-.headline1{
-  color: var(--light-gray);
-  background-color: var(--theme-color);
-}
-
-.key-conditions ul {
+.keyConditions ul {
   list-style-type: none;
-  padding-left: 0;  /* Optional: to remove any indentation */
+  padding-left: 0;
 }
 
+/* Typography */
+.mainTitle span {
+  color: var(--primary-green);
+}
 
 h2 {
-  color: var(--light-gray);
-  background-color: var(--theme-color);
   font-size: 2rem;
   margin-bottom: 1.5rem;
   font-weight: 600;
   position: relative;
   padding-bottom: 0.5rem;
   display: inline-block;
-  text-align: center;
 }
 
 h2::after {
@@ -98,27 +89,21 @@ h3 {
   font-weight: 600;
 }
 
-strong {
-  font-weight: 700;
-  color: var(--dark-green);
-}
-
 /* Lists */
-.feature-list {
+.featureList {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 2rem;
 }
 
-.feature-list li {
+.featureList li {
   margin-bottom: 1rem;
   padding-left: 1.5rem;
   position: relative;
 }
 
-/* Remove numbering from lists */
-.feature-list li::before {
-  /* content: "•"; */
+.featureList li::before {
+  content: "•";
   color: var(--primary-green);
   position: absolute;
   left: 0;
@@ -126,50 +111,20 @@ strong {
 }
 
 /* Tables */
-.table-responsive {
+.tableResponsive {
   margin: 2rem 0;
   overflow-x: auto;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-  background-color: var(--white);
-}
-
-.table th {
-  background-color: var(--primary-green);
-  color: var(--white);
-  padding: 1rem;
-  text-align: left;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.table td {
-  padding: 1rem;
-  border-bottom: 1px solid var(--border-gray);
-  transition: background-color 0.3s ease;
-}
-
-.table tbody tr:hover {
-  background-color: rgba(0, 168, 107, 0.05);
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 168, 107, 0.02);
-}
-
 /* Content Sections */
-.intro-content,
-.trading-content,
-.commission-content,
-.royalty-content,
-.terms-content,
-.reasons-content {
+.introContent,
+.tradingContent,
+.commissionContent,
+.royaltyContent,
+.termsContent,
+.reasonsContent {
   background-color: var(--white);
   padding: 2rem;
   border-radius: 10px;
@@ -177,12 +132,12 @@ strong {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.intro-content:hover,
-.trading-content:hover,
-.commission-content:hover,
-.royalty-content:hover,
-.terms-content:hover,
-.reasons-content:hover {
+.introContent:hover,
+.tradingContent:hover,
+.commissionContent:hover,
+.royaltyContent:hover,
+.termsContent:hover,
+.reasonsContent:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
@@ -197,7 +152,7 @@ strong {
   border-left: 4px solid var(--warning-text);
 }
 
-.income-types {
+.incomeTypes {
   margin-top: 2rem;
   padding: 1.5rem;
   background-color: rgba(0, 168, 107, 0.05);
@@ -205,15 +160,15 @@ strong {
 }
 
 /* Custom Section Styles */
-.trading-section {
+.tradingSection {
   background: linear-gradient(135deg, var(--highlight-color) 0%, var(--light-gray) 100%);
 }
 
-.magic-income-section .table th {
+.magicIncomeSection :global(.table th) {
   background-color: var(--dark-green);
 }
 
-.rewards-section {
+.rewardsSection {
   background: linear-gradient(45deg, var(--light-gray) 0%, var(--white) 100%);
 }
 
@@ -228,155 +183,220 @@ strong {
   cursor: pointer;
 }
 
-.btn-primary {
+.btnPrimary {
   background-color: var(--primary-green);
   color: var(--white);
   border: none;
 }
 
-.btn-primary:hover {
+.btnPrimary:hover {
   background-color: var(--dark-green);
   transform: translateY(-2px);
+}
+
+/* Mini Hero Section */
+.miniHero {
+  background-color: var(--dark-green);
+  padding: 2rem 0;
+  color: var(--white);
+}
+
+.breadcrumbWrapper {
+  margin-bottom: 1rem;
+}
+
+.homeLink {
+  color: var(--light-green);
+  text-decoration: none;
+}
+
+.separator {
+  color: var(--light-green);
+  margin: 0 0.5rem;
+}
+
+.currentPage {
+  color: var(--white);
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 700;
 }
 
 /* Animations */
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.section {
-  animation: fadeIn 0.8s ease-out;
+/* Global styles for react-bootstrap table */
+:global(.table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background-color: var(--white);
 }
 
-/* Responsive Design */
+:global(.table th) {
+  background-color: var(--primary-green);
+  color: var(--white);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+:global(.table td) {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-gray);
+  transition: background-color 0.3s ease;
+}
+
+:global(.table tbody tr:hover) {
+  background-color: rgba(0, 168, 107, 0.05);
+}
+
+:global(.table-striped tbody tr:nth-of-type(odd)) {
+  background-color: rgba(0, 168, 107, 0.02);
+}
+
+/* Media Queries */
 @media (max-width: 1200px) {
   .container {
-      max-width: 960px;
+    max-width: 960px;
   }
 }
 
 @media (max-width: 992px) {
   .container {
-      max-width: 720px;
+    max-width: 720px;
   }
 
-  .main-title {
-      font-size: 2.25rem;
+  .mainTitle {
+    font-size: 2.25rem;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-      max-width: 540px;
+    max-width: 540px;
   }
 
   .section {
-      padding: 2rem 0;
+    padding: 2rem 0;
   }
 
-  .main-title {
-      font-size: 2rem;
+  .mainTitle {
+    font-size: 2rem;
   }
 
   h2 {
-      font-size: 1.75rem;
+    font-size: 1.75rem;
   }
 
   h3 {
-      font-size: 1.25rem;
+    font-size: 1.25rem;
   }
 
-  .table-responsive {
-      margin: 1rem -1rem;
-      width: calc(100% + 2rem);
+  .tableResponsive {
+    margin: 1rem -1rem;
+    width: calc(100% + 2rem);
   }
 
-  .table th,
-  .table td {
-      padding: 0.75rem;
-      font-size: 0.9rem;
+  :global(.table th),
+  :global(.table td) {
+    padding: 0.75rem;
+    font-size: 0.9rem;
   }
 
-  .intro-content,
-  .trading-content,
-  .commission-content,
-  .royalty-content,
-  .terms-content,
-  .reasons-content {
-      padding: 1.5rem;
+  .introContent,
+  .tradingContent,
+  .commissionContent,
+  .royaltyContent,
+  .termsContent,
+  .reasonsContent {
+    padding: 1.5rem;
   }
 }
 
 @media (max-width: 576px) {
   .section {
-      padding: 1.5rem 0;
+    padding: 1.5rem 0;
   }
 
-  .main-title {
-      font-size: 1.75rem;
+  .mainTitle {
+    font-size: 1.75rem;
   }
 
   h2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   h3 {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
-  .table th,
-  .table td {
-      padding: 0.5rem;
-      font-size: 0.8rem;
+  :global(.table th),
+  :global(.table td) {
+    padding: 0.5rem;
+    font-size: 0.8rem;
   }
 
-  .feature-list li {
-      padding-left: 1.25rem;
+  .featureList li {
+    padding-left: 1.25rem;
   }
 
-  .intro-content,
-  .trading-content,
-  .commission-content,
-  .royalty-content,
-  .terms-content,
-  .reasons-content {
-      padding: 1rem;
+  .introContent,
+  .tradingContent,
+  .commissionContent,
+  .royaltyContent,
+  .termsContent,
+  .reasonsContent {
+    padding: 1rem;
   }
 }
 
 /* Print Styles */
 @media print {
   .section {
-      padding: 1rem 0;
-      page-break-inside: avoid;
+    padding: 1rem 0;
+    page-break-inside: avoid;
   }
 
-  .table-responsive {
-      overflow-x: visible;
+  .tableResponsive {
+    overflow-x: visible;
   }
 
-  .intro-content,
-  .trading-content,
-  .commission-content,
-  .royalty-content,
-  .terms-content,
-  .reasons-content {
-      box-shadow: none;
+  .introContent,
+  .tradingContent,
+  .commissionContent,
+  .royaltyContent,
+  .termsContent,
+  .reasonsContent {
+    box-shadow: none;
   }
 }
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-  * {
-      animation: none !important;
-      transition: none !important;
+  .section,
+  .btnPrimary:hover,
+  .introContent,
+  .tradingContent,
+  .commissionContent,
+  .royaltyContent,
+  .termsContent,
+  .reasonsContent {
+    animation: none !important;
+    transition: none !important;
   }
 }
 
