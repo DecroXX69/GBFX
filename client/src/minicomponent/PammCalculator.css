@@ -10,14 +10,6 @@
   transition: min-height 0.3s ease; /* Smooth transition for height changes */
 }
 
-.calculator-container.compact {
-  min-height: 50vh; /* Smaller height when no results */
-}
-
-.calculator-container.expanded {
-  min-height: 100vh; /* Full height when results are displayed */
-}
-
 .error {
   color: red;
   font-size: 12px;
@@ -125,6 +117,7 @@
 .switch-on .switch-handle {
   left: 28px;
 }
+
 
 .button {
   width: 100%;

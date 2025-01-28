@@ -2,7 +2,7 @@ import React from 'react';
 import { FaTelegramPlane } from "react-icons/fa";
 
 const TelegramButton = () => {
-  const telegramUrl = "https://t.me/your_channel_name"; // Replace with your Telegram channel URL
+  const telegramUrl = "https://t.me/gbtradechat"; // Replace with your Telegram channel URL
 
   return (
     <a 
