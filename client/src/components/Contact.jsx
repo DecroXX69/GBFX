@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaTelegram, FaYoutube, FaTwitter } from 'react-icons/fa';
 import './Contact.css';
 import iconPhone from '../assets/1.png';
 import iconMail from '../assets/2.png';
@@ -67,7 +67,7 @@ const Contact = () => {
               <div className="social-links">
                 <a href="#" className="social-icon"><FaFacebookF /></a>
                 <a href="#" className="social-icon"><FaInstagram /></a>
-                <a href="#" className="social-icon"><FaLinkedinIn /></a>
+                <a href="https://t.me/gbtradechat" className="social-icon"><FaTelegram /></a>
                 <a href="#" className="social-icon"><FaYoutube /></a>
                 <a href="#" className="social-icon"><FaTwitter /></a>
               </div>

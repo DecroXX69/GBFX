@@ -26,8 +26,8 @@ const Footer = () => {
 
           <nav className={styles.mainNav}>
             <a href="/">Home</a>
-            <a href="/pamm">PAMM Account</a>
-            <a href="/join">Join Our Program</a>
+            <a href="/trading">PAMM Account</a>
+            <a href="/market">Join Our Program</a>
             <a href="/contact">Contact Us</a>
             <a href="/contact">Terms & Conditions</a>
 
@@ -40,7 +40,7 @@ const Footer = () => {
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <FaXTwitter size={20} />
             </a>
-            <a href="https://Telegram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://t.me/gbtradechat" target="_blank" rel="noopener noreferrer">
               <FaTelegram size={20} />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
