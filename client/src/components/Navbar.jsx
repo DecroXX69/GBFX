@@ -19,10 +19,10 @@ const Navbar = () => {
             {/* Logo */}
             <div className={styles.brand}>
               <div className={styles.logo}>
-                <img src={gb1} alt="GBTrade Logo" />
+              <a href='/'>   <img src={gb1} alt="GBTrade Logo" /></a>
               </div>
-              <div className={styles.brandName}><span style={{ color: '#051747' }}>GB</span>
-              <span style={{ color: '#1d5013' }}>Trade</span></div>
+              <a href='/' style={{textDecoration:'none'}}> <div className={styles.brandName}><span style={{ color: '#051747' }}>GB</span>
+              <span style={{ color: '#1d5013' }}>Trade</span></div></a>
             </div>
 
             {/* Desktop Menu */}

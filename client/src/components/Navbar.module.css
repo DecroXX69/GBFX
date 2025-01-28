@@ -45,6 +45,7 @@
 .brandName {
   font-size: 26px;
   font-weight: 600;
+  text-decoration: none ;
   color: #333;
 }
 
