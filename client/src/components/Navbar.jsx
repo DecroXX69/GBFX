@@ -21,7 +21,8 @@ const Navbar = () => {
               <div className={styles.logo}>
                 <img src={gb1} alt="GBTrade Logo" />
               </div>
-              <div className={styles.brandName}>GBTrade</div>
+              <div className={styles.brandName}><span style={{ color: '#051747' }}>GB</span>
+              <span style={{ color: '#1d5013' }}>Trade</span></div>
             </div>
 
             {/* Desktop Menu */}

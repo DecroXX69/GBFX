@@ -207,11 +207,14 @@ h3 {
 }
 
 .breadcrumbWrapper {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+  font-family: var(--title-font);
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .homeLink {
-  color: var(--light-green);
+  color: #22823A;
   text-decoration: none;
 }
 
@@ -225,9 +228,11 @@ h3 {
 }
 
 .heroTitle {
-  font-size: 2.5rem;
+  font-size: 48px;
+  font-family: var(--title-font);
   margin: 0;
   font-weight: 700;
+  animation: fadeIn 1s forwards;
 }
 
 /* Animations */

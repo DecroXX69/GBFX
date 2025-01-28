@@ -126,9 +126,7 @@ const Contact = () => {
                   <Form.Control as="textarea" rows={6} placeholder="Enter Your Message" />
                 </Form.Group>
 
-                <Button type="submit" className="contact-submit-btn1">
-                  Contact Us Now
-                </Button>
+                <button type='submit' className='contact-submit-btn10'>Contact Us Now</button>
               </Form>
             </div>
           </Col>
