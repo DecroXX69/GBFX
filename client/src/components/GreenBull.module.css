@@ -69,7 +69,7 @@ h2 {
   font-weight: 600;
   position: relative;
   padding-bottom: 0.5rem;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 h2::after {
