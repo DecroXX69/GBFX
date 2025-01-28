@@ -175,7 +175,7 @@ h3 {
 /* Buttons and Interactive Elements */
 .btn {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
+  
   border-radius: 5px;
   font-weight: 600;
   text-decoration: none;
