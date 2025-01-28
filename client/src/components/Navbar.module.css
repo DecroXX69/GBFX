@@ -112,6 +112,7 @@
     padding: 8px 22px;  /* Slightly larger padding */
     border-radius: 20px;
     border: 1px solid #e0e0e0;
+    text-decoration: none;
     transition: all 0.2s;
   }
   .create{
@@ -139,6 +140,7 @@
   .navLink:hover {
     color: #f8f9fa;
     background-color: var(--theme-color);
+    text-decoration: none;
   }
   
   .searchBtn {
@@ -171,6 +173,7 @@
   
     .navLink {
       padding: 8px 18px;
+      text-decoration: none;
     }
   }
   

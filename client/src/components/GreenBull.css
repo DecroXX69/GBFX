@@ -46,22 +46,39 @@
 
 /* Typography */
 .main-title {
-  color: var(--primary-green);
+  color: var(--light-gray);
+  background-color: var(--theme-color);
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  display: inline-block;
+  text-align: center;
 }
 
+.headline1{
+  color: var(--light-gray);
+  background-color: var(--theme-color);
+}
+
+.key-conditions ul {
+  list-style-type: none;
+  padding-left: 0;  /* Optional: to remove any indentation */
+}
+
+
 h2 {
-  color: var(--primary-green);
+  color: var(--light-gray);
+  background-color: var(--theme-color);
   font-size: 2rem;
   margin-bottom: 1.5rem;
   font-weight: 600;
   position: relative;
   padding-bottom: 0.5rem;
+  display: inline-block;
+  text-align: center;
 }
 
 h2::after {
@@ -101,7 +118,7 @@ strong {
 
 /* Remove numbering from lists */
 .feature-list li::before {
-  content: "•";
+  /* content: "•"; */
   color: var(--primary-green);
   position: absolute;
   left: 0;
