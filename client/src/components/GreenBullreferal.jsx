@@ -117,7 +117,7 @@ const GreenBullPage = () => {
       {/* Trading Profit Section */}
       <section className="section trading-section" data-aos="fade-up">
         <div className="container">
-          <h2>How Does Trading Profit Work?</h2>
+          <h2 className='headline1'>How Does Trading Profit Work?</h2>
           <div className="trading-content">
             <ul className="feature-list">
               <li>You can earn between <strong>10% to 40% monthly</strong> based on your investments and the market performance.</li>
@@ -139,6 +139,7 @@ const GreenBullPage = () => {
           <h2>Magic Income (Trading Share Commission)</h2>
           <div className="commission-content">
             <ul className="feature-list">
+              <li><h3>“When you empower others, you empower yourself. Together, we grow stronger.”</h3></li>
               <li>Earn commission by <strong>referring others</strong> to join GBTrade and helping your team generate sales.</li>
               <li>There are <strong>7 defined ranks</strong> in the GBTrade plan, and your income grows as you move up.</li>
             </ul>
@@ -239,16 +240,18 @@ const GreenBullPage = () => {
           <h2>Terms and Conditions</h2>
           <div className="terms-content">
             <div className="key-conditions">
-              <h3>Key Conditions to Keep in Mind:</h3>
+              <h2>Key Conditions to Keep in Mind:</h2>
               <ul>
                 <li><strong>Minimum Withdrawal</strong>: $10 (must be in multiples of $10).</li>
+                <br />
                 <li><strong>Withdrawal Days</strong>: Saturday and Sunday.</li>
+                <br />
                 <li><strong>Processing Time</strong>: Withdrawal requests are processed within <strong>24–48 hours</strong>.</li>
               </ul>
             </div>
 
             <div className="business-maintenance">
-              <h3>Business Maintenance:</h3>
+              <h2>Business Maintenance:</h2>
               <ul className="feature-list">
                 <li>You must maintain your rank and team performance weekly.</li>
                 <li>If the business is down temporarily, commission earnings remain unaffected.</li>
@@ -257,7 +260,7 @@ const GreenBullPage = () => {
             </div>
 
             <div className="important-notes">
-              <h3>Important Notes:</h3>
+              <h2>Important Notes:</h2>
               <ul className="feature-list">
                 <li>Withdrawals are allowed only after achieving milestone ranks to prevent system abuse.</li>
                 <li>Regular updates ensure transparency and smooth functioning.</li>

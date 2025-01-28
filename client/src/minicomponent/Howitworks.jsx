@@ -3,49 +3,54 @@ import './how-it-works.css';
 import img from '../assets/process-1.jpg';
 
 const HowItWorks = () => {
-  const steps = [
-    {
-      number: 1,
-      title: "Sign up, It's Free!",
-      description: "Our team will set up your account and help you build job to easy-to-use web dashboard."
-    },
-    {
-      number: 2,
-      title: "Find best Deals and Invest",
-      description: "Create and Trade anywhere from 1-100% openings with just a few clicks. customize your own."
-    },
-    {
-      number: 3,
-      title: "Get you profit back",
-      description: "View market, reviews, and rosters before forex arrive on the site, and post reviews and pay, effortlessly."
-    }
-  ];
-
   return (
-    
     <div className="how-it-works">
       <div className="container">
-      
+
         <div className="works-content">
-          {/* Left side - Text boxes */}
+          {/* Left side - Text content */}
           <div className="works-left">
             <div className="works-header">
               <span className="process-tag">THE PROCESS</span>
               <h2>How It Works</h2>
             </div>
             <div className="step-boxes">
-              {steps.map((step) => (
-                <div key={step.number} className="step-box">
-                  <div className="step-number">{step.number}</div>
-                  <div className="step-info">
-                    <h3>{step.title}</h3>
-                    <p>{step.description}</p>
-                  </div>
+              <div className="step-box">
+                <div className="step-number">1</div>
+                <div className="step-info">
+                  <h3>Unlock Financial Freedom</h3>
+                  <p>Put your money to work and achieve your financial goals effortlessly!</p>
                 </div>
-              ))}
-            </div>
+              </div>
+              <div className="step-box">
+                <div className="step-number">2</div>
+                <div className="step-info">
+                  <h3>Simple Investment Process</h3>
+                  <p>
+                     Earn returns of 10% to 40% monthly, depending on your investment and market trends.<br />
+                     Examples:<br />
+                    &nbsp;&nbsp;* Invest $100 → Earn $10–$40 monthly.<br />
+                    &nbsp;&nbsp;* Invest $1,000 → Earn $100–$400 monthly.
+                  </p>
+                </div>
+              </div>
+              <div className="step-box">
+                <div className="step-number">3</div>
+                <div className="step-info">
+                  <h3>MT4 Trading Benefits</h3>
+                  <p>
+                     Access real-time charts, custom indicators, and trading signals.<br />
+                     Trade seamlessly on mobile, tablet, or desktop.<br />
+                     Secure and efficient platform optimized for profit.
+                  </p>
+                </div>
+              </div>
+            </div><br />
+            <p className="works-footer">
+           <h7> <i>"Success takes time, but with Green Bull, it happens faster than you’d expect!"</i></h7>
+            </p>
           </div>
-          
+
           {/* Right side - Image */}
           <div className="works-right">
             <img src={img} alt="Mobile app interface" />

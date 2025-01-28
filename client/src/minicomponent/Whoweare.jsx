@@ -9,27 +9,34 @@ const TradingSection = () => {
   const sections = [
     {
       id: 'who-we-are',
-      title: 'Who we are',
-      content: 'As a brokerage firm or trading platform, we are dedicated to providing innovative and user-friendly trading.',
+      title: 'Daily Zoom Meetings',
+      content: ' Get expert guidance and stay updated with the latest strategies.',
     },
     {
       id: 'what-we-do',
-      title: 'What we do',
+      title: 'Social Media Promotions',
       content:
-        'We offer comprehensive trading solutions across multiple financial markets including forex, stocks, and cryptocurrencies, all backed by advanced technology and expert support.',
+        'Build visibility and grow your network faster.',
     },
     {
       id: 'how-it-works',
-      title: 'How it works',
+      title: 'Celebrity Engagement: ',
       content:
-        'Our platform provides real-time market data, advanced charting tools, and seamless execution. Simply sign up, fund your account, and start trading with confidence.',
+        'Stay motivated and inspired with top influencers and celebrity participation.',
     },
     {
       id: 'why-choose-us',
-      title: 'Why choose us',
+      title: '24x7 Telegram Support',
       content:
-        'With our competitive spreads, advanced trading tools, and 24/7 customer support, we ensure the best possible trading experience for both beginners and experienced traders.',
+        'Live chat groups ensure your questions are answered anytime, anywhere.',
     },
+    {
+      id: 'why-kill-us',
+      title: 'Unique Earning Concepts',
+      content:
+        'Redefine your rewards and achieve unexpected financial growth.',
+    }
+
   ];
 
   return (
@@ -37,8 +44,8 @@ const TradingSection = () => {
       {/* Left side - Content */}
       <div className="content-section">
         <div className="section-header">
-          <span className="account-label">ACCOUNT</span>
-          <h2 className="section-title">Trading Accounts</h2>
+          <span className="account-label"><i>"Take first step towards success-because waiting won't change your life, action will"</i></span>
+          <h2 className="section-title">Why Choose Green Bull?</h2>
         </div>
 
         <div className="accordion-container">

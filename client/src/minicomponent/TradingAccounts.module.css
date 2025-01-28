@@ -1,89 +1,97 @@
 .container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tag {
+  background-color: #e7f5e7;
+  color: var(--theme-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  color: #1a1a1a;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  align-items: stretch; /* Ensures all cards are the same height */
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column; /* Ensures content stacks evenly */
+  justify-content: space-between; /* Distributes content evenly */
+  height: 100%; /* Makes all cards the same height */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.iconWrapper {
+  background-color: var(--theme-color);
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  color: white;
+  width: 24px;
+  height: 24px;
+}
+
+.accountTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  text-align: center; /* Align titles to the center for better aesthetics */
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  flex-grow: 1; /* Ensures descriptions stretch evenly */
+  text-align: center; /* Align text for uniformity */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
   }
-  
-  .header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  .tag {
-    background-color: #e7f5e7;
-    color: var(--theme-color);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-top: 1rem;
-    color: #1a1a1a;
-  }
-  
+
   .cardContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
   }
-  
-  .card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
+
+  .title {
+    font-size: 2rem;
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .iconWrapper {
-    background-color: var(--theme-color);
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  .icon {
-    color: white;
-    width: 24px;
-    height: 24px;
-  }
-  
-  .accountTitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #1a1a1a;
-  }
-  
-  .description {
-    color: #666;
-    line-height: 1.6;
-    font-size: 0.95rem;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      padding: 1rem;
-    }
-    
-    .cardContainer {
-      grid-template-columns: 1fr;
-    }
-    
-    .title {
-      font-size: 2rem;
-    }
-  }
+}
