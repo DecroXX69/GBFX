@@ -17,21 +17,22 @@ const TradingPage = () => {
   
   const slides = [
     {
-      title: "Trading for Anyone.\nAnywhere. Anytime.",
-      subtitle: "Trade over 1000 Instruments. Forex, CFDs on Stock Indices,\nCommodities, Stocks, Metals and Energies.",
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80" // Placeholder image
+      title: "Join GB Trade. Start Your Financial Journey Today!",
+      subtitle: "Unlock unlimited growth with a $100 investment. Start now!",
+      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80"
     },
     {
-      title: "Advanced Trading Tools.\nProfessional Results.",
-      subtitle: "Access real-time market data, advanced charts,\nand powerful trading indicators.",
+      title: "Trade Smart with VT Markets. Unlock Your Potential!",
+      subtitle: "Experience advanced tools and secure trading. Join VT Markets!",
       image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80"
     },
     {
-      title: "Secure Trading.\nReliable Platform.",
-      subtitle: "Experience safe and secure trading with\n24/7 customer support and protection.",
+      title: "Rewards Await You with GB Trade. Achieve Financial Freedom!",
+      subtitle: "Earn from trading, commissions, rewards, and royalty income streams.",
       image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80"
     }
   ];
+  
 
   useEffect(() => {
     const slideInterval = setInterval(() => {
