@@ -43,6 +43,7 @@
   color: #ffffff;
   padding: 20px;
   text-align: center;
+  border-radius: 20px;
 }
 
 .card-title {
@@ -136,6 +137,7 @@
 .button:hover {
   background-color: #45a049;
   transform: scale(1.05);
+  padding: auto;
 }
 
 .button:active {

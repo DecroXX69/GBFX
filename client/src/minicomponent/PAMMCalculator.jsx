@@ -119,7 +119,7 @@ const PAMMCalculator = () => {
         <div className="card-content">
           <div className="form-group">
             <label htmlFor="starting-balance" className="label">
-              Starting Balance:
+              <b>Starting Balance:</b>
             </label>
             <input
               type="number"
@@ -133,7 +133,7 @@ const PAMMCalculator = () => {
           </div>
           <div className="form-group">
             <label htmlFor="Months" className="label">
-              Months:
+             <b> Months:</b>
             </label>
             <input
               type="number"
@@ -147,7 +147,7 @@ const PAMMCalculator = () => {
           </div>
           <div className="form-group">
             <label htmlFor="gain-per-Months" className="label">
-              Gain per Month (%):
+              <b>Gain per Month (%):</b>
             </label>
             <input
               type="number"
@@ -161,7 +161,7 @@ const PAMMCalculator = () => {
           </div>
 
           <div className="form-group switch-group">
-            <label className="label">Enable Advanced Mode:</label>
+            <label className="label"><b>Enable Advanced Mode:</b></label>
             <div
               className={`switch ${isSwitched ? "switch-on" : ""}`}
               onClick={() => setIsSwitched(!isSwitched)}
@@ -180,7 +180,7 @@ const PAMMCalculator = () => {
               >
                 <div className="form-group">
                   <label htmlFor="performance-fee" className="label">
-                    Performance Fee (%):
+                    <b>Performance Fee (%):</b>
                   </label>
                   <input
                     type="number"
@@ -194,7 +194,7 @@ const PAMMCalculator = () => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="additional-deposit" className="label">
-                    Additional Deposit per Month:
+                    <b>Additional Deposit per Month:</b>
                   </label>
                   <input
                     type="number"
@@ -207,7 +207,7 @@ const PAMMCalculator = () => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="withdrawal-per-Months" className="label">
-                    Withdrawal per Month:
+                    <b>Withdrawal per Month:</b>
                   </label>
                   <input
                     type="number"
@@ -267,7 +267,8 @@ const PAMMCalculator = () => {
             )}
           </AnimatePresence>
           
-          <div className="currency-converter">
+          <div className="currency-converter"><br />
+            <header className="card-header">  <h2 className="card-title">Currency Converter</h2></header>
           <iframe
             title="fx"
             src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=USD&targetCurrency=AED&amount=1"
