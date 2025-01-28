@@ -92,9 +92,9 @@
   transition: color 0.3s ease;
 }
 
-.create:hover {
+/* .create:hover {
   background-color: darken(var(--theme-color), 10%);
-}
+} */
 
 .create1:hover {
   color: darken(var(--theme-color), 10%);
