@@ -43,6 +43,7 @@
     
   }
   
+  
   .loginBtn {
     background-color: transparent;
     color: white;
@@ -60,6 +61,8 @@
     border-bottom: 1px solid #eee;
     margin-top: 1px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow when scrolling */
+    position: relative;
+    z-index: 100;
 }
   
   .mainNavContent {
@@ -68,6 +71,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;  /* Added vertical padding */
+    
   }
   
   .brand {
@@ -114,6 +118,7 @@
     border: 1px solid #e0e0e0;
     text-decoration: none;
     transition: all 0.2s;
+    
   }
   .create{
     background-color: var(--theme-color);
@@ -164,6 +169,48 @@
   .loginBtn:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
+  /* Mobile Dropdown Styles */
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.mobileMenu a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.mobileMenu a:hover {
+  background-color: var(--theme-color);
+  color: white;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s;
+}
+
+/* Show Hamburger and Hide Desktop Menu for Mobile */
+
   
   /* Media Queries */
   @media (max-width: 1024px) {
@@ -180,5 +227,9 @@
   @media (max-width: 768px) {
     .navMenu {
       display: none;
+    }
+  
+    .hamburger {
+      display: flex;
     }
   }

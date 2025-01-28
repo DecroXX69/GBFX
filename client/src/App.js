@@ -15,7 +15,7 @@ import NewsFeed from './minicomponent/NewsFeed';
 import Testimonials from './minicomponent/Testimonials';
 import OurTeam from './minicomponent/Ourteam';
 import Pricing from './minicomponent/PricingPans';
-import ForexTaperWidget from './minicomponent/tradingview';
+
 import GreenBullPage from './components/GreenBullreferal';
 import Pamm from './components/Pamm';
 import PAMMLanding from './minicomponent/PammLanding';

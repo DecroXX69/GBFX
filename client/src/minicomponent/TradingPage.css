@@ -1,213 +1,170 @@
-  /* .trading-page {
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    } */
-  
-  /* Ticker Bar Styles */
+/* Hero Section Styles */
+.hero-section2 {
+  height: calc(100vh - 60px); /* Adjust height to account for navbar */
+  position: relative;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
 
-  .ticker-wrapper {
-    display: flex;
-    animation: ticker 30s linear infinite;
-    white-space: nowrap;
-  }
-  
-  .ticker-item {
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-    font-size: 14px;
-  }
-  
-  .currency-pair {
-    margin-right: 8px;
-  }
-  
-  .price {
-    margin-right: 8px;
-  }
-  
-  .change {
-    display: flex;
-    align-items: center;
-  }
-  
-  .change.positive {
-    color: #00ff00;
-  }
-  
-  .change.negative {
-    color: #ff0000;
-  }
-  
-  .change i {
-    margin-left: 2px;
-    font-size: 16px;
-  }
-  
-  /* Hero Section Styles */
-  .hero-section2 {
-    height: calc(100vh - 40px);
-    position: relative;
-    overflow: hidden;
-    background-color: #1a1a1a;
-    top: -56px;
-  }
-  
-  .hero-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: zoomEffect 5s ease-in-out infinite alternate;
+}
+
+.hero-slide.active .slide-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(42, 8, 69, 0.9) 0%, rgba(5, 58, 37, 0.9) 100%);
+}
+
+.hero-content {
+  padding-left: 5%;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  white-space: pre-line;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero-slide.active .hero-title {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  white-space: pre-line;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero-slide.active .hero-subtitle {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.create-account-btn {
+  background-color: var(--theme-color);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero-slide.active .create-account-btn {
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.create-account-btn:hover {
+  background-color: #218838;
+}
+
+.slide-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: white;
+}
+
+/* Animations */
+@keyframes ticker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes zoomEffect {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes fadeInUp {
+  0% {
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    transform: translateY(20px);
   }
-  
-  .hero-slide.active {
+  100% {
     opacity: 1;
-    visibility: visible;
+    transform: translateY(0);
   }
-  
-  .slide-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    animation: zoomEffect 5s ease-in-out infinite alternate;
-  }
-  
-  .hero-slide.active .slide-background::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(42, 8, 69, 0.9) 0%, rgba(5, 58, 37, 0.9) 100%);
-  }
-  
-  .hero-content {
-    padding-left: 5%;
-    color: white;
-    position: relative;
-    z-index: 2;
-  }
-  
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
   .hero-title {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    white-space: pre-line;
-    opacity: 0;
-    transform: translateY(20px);
+    font-size: 3rem;
   }
-  
-  .hero-slide.active .hero-title {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-  
+
   .hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    white-space: pre-line;
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  
-  .hero-slide.active .hero-subtitle {
-    animation: fadeInUp 0.8s ease-out 0.2s forwards;
-  }
-  
-  .create-account-btn {
-    background-color: var(--theme-color);
-    color: white;
-    border: none;
-    padding: 12px 30px;
     font-size: 1.1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
   }
-  
-  .hero-slide.active .create-account-btn {
-    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
   }
-  
-  .create-account-btn:hover {
-    background-color: #218838;
+
+  /* Keep the hero section aligned with no space above */
+  .hero-section2 {
+    height: calc(100vh - 60px); /* Adjust for navbar */
   }
-  
-  .slide-indicators {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 3;
+
+  .hero-content {
+    padding: 0 5%;
+    text-align: center;
   }
-  
-  .indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .indicator.active {
-    background-color: white;
-  }
-  
-  /* Animations */
-  @keyframes ticker {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
-  
-  @keyframes zoomEffect {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
-  }
-  
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 992px) {
-    .hero-title {
-      font-size: 3rem;
-    }
-    
-    .hero-subtitle {
-      font-size: 1.1rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .hero-title {
-      font-size: 2.5rem;
-    }
-    
-    .hero-content {
-      padding: 0 5%;
-      text-align: center;
-    }
-  }
+}

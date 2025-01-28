@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
+import styles from './ForexTaperWidget.module.css';
 
 const ForexTaperWidget = () => {
   useEffect(() => {
-    // Check if the script already exists to prevent duplication
     const scriptId = 'tradingview-widget-script';
     if (!document.getElementById(scriptId)) {
       const script = document.createElement('script');
@@ -27,7 +27,6 @@ const ForexTaperWidget = () => {
           { description: 'USD CNH', proName: 'FX:USDCNH' },
           { description: 'USD HKD', proName: 'FX:USDHKD' },
           { description: 'BTC USDT', proName: 'BINANCE:BTCUSDT' },
-         
         ],
         showSymbolLogo: true,
         isTransparent: false,
@@ -37,19 +36,12 @@ const ForexTaperWidget = () => {
       });
       document.querySelector('.tradingview-widget-container').appendChild(script);
     }
-  }, []); // Empty dependency array ensures this runs only once when the component mounts
+  }, []);
 
   return (
-    <div className="tradingview-widget-container" style={{ position: 'relative', bottom: '23px' }}>
-      <div className="tradingview-widget-container__widget"></div>
-      <div className="tradingview-widget-copyright">
-        {/* <a
-          href="https://www.tradingview.com/"
-          rel="noopener nofollow"
-          target="_blank"
-        >
-          <span className="blue-text">Track all markets on TradingView</span>
-        </a> */}
+    <div className={styles.forexWidgetContainer}>
+      <div className="tradingview-widget-container">
+        <div className="tradingview-widget-container__widget"></div>
       </div>
     </div>
   );

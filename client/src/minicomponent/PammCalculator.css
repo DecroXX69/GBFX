@@ -1,13 +1,15 @@
 .calculator-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: auto; /* Allows dynamic height */
+  align-items: flex-start; /* Aligns the calculator container to the top to prevent overlap */
+  min-height: 100vh; /* Ensure the container takes up the full viewport height */
   background-color: #FFF9F0;
   font-family: 'Roboto', Arial, sans-serif;
   padding: 16px;
   box-sizing: border-box;
-  transition: min-height 0.3s ease; /* Smooth transition for height changes */
+  overflow: hidden; /* Prevent overflow */
+  transition: min-height 0.3s ease;
+  margin-top: 60px; /* Adds space for the navbar if needed */
 }
 
 .error {
@@ -118,7 +120,6 @@
   left: 28px;
 }
 
-
 .button {
   width: 100%;
   padding: 12px;
@@ -142,7 +143,7 @@
 }
 
 .table-container {
-  overflow-x: hidden; /* Removes horizontal scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
   margin-top: 20px;
 }
 
@@ -180,7 +181,6 @@
   font-weight: bold;
 }
 
-
 @keyframes hoverEffect {
   from {
     background-color: #f9f9f9;
@@ -204,6 +204,10 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .calculator-container {
+    padding-top: 80px; /* Ensure the navbar doesn't overlap */
+  }
+
   .card {
     padding: 16px;
     max-width: 90%;
@@ -229,6 +233,6 @@
   }
 
   .table-container {
-    overflow-x: auto; /* Retain horizontal scrolling for small screens */
+    overflow-x: auto; /* Allow horizontal scrolling for small screens */
   }
 }

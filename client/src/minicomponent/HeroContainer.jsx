@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './TradingPage.css';
-import ForexTaperWidget from './tradingview.jsx';
+// import ForexTaperWidget from './tradingview.jsx';
 
 const TradingPage = () => {
   const [forexData, setForexData] = useState([
@@ -72,9 +72,9 @@ const TradingPage = () => {
         </div>
       </div> */}
   <div className='slide'>
-  <div className="forex-widget-section">
+  {/* <div className="forex-widget-section">
         <ForexTaperWidget />
-      </div>
+      </div> */}
       <div className="hero-section2">
       
         {slides.map((slide, index) => (
