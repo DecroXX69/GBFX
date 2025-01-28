@@ -1,175 +1,119 @@
-/* Navbar.module.css */
+/* General Styles */
 .header {
-    width: 100%;
-  }
-  
-  /* Top Bar Styles */
-  .topBar {
-    background-color: #1a1a1a;
-    height: 45px;  /* Increased height */
-  }
-  
-  .topBarContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .phoneInfo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #fff;
-    font-size: 14px;  /* Slightly larger font */
-  }
-  
-  .headphoneIcon {
-    font-size: 14px;  /* Larger icon */
-  }
-  
-  .authButtons {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .openAccountBtn {
-    background-color: #28a745;
-    color: white;
-    padding: 8px 20px;  /* Larger padding */
-    border-radius: 4px;
-    font-size: 14px;  /* Larger font */
-    transition: background-color 0.2s;
-    
-  }
-  
-  
-  .loginBtn {
-    background-color: transparent;
-    color: white;
-    padding: 7px 20px;  /* Larger padding */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    font-size: 14px;  /* Larger font */
-    transition: all 0.2s;
-  }
-  
-  /* Main Navigation Styles */
-  .mainNav {
-    background-color: #fff;
-    height: 90px;
-    border-bottom: 1px solid #eee;
-    margin-top: 1px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow when scrolling */
-    position: relative;
-    z-index: 100;
+  width: 100%;
 }
-  
-  .mainNavContent {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;  /* Added vertical padding */
-    
-  }
-  
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .logo {
-    width: 50px;  /* Increased from 10px */
-    height: 50px; /* Increased from 10px */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* This will maintain aspect ratio */
-  }
-  
-  .brandName {
-    font-size: 26px;
-    font-weight: 600;
-    color: #333;
-  }
-  
-  .navMenu {
-    font-family: var( --title-font);
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    text-decoration: none;
-  }
-  
-  .navLink {
-    font-family: var( --title-font);
-    /* font-weight: bold; */
-    color: #333;
-    font-size: 15px;
-    padding: 8px 22px;  /* Slightly larger padding */
-    border-radius: 20px;
-    border: 1px solid #e0e0e0;
-    text-decoration: none;
-    transition: all 0.2s;
-    
-  }
-  .create{
-    background-color: var(--theme-color);
-    color: white;
-    border: 2px, solid;
-    border-color:var(--theme-color);
-    padding: 8px 17px;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .create1{
-    /* border-color: #28a745; */
-    /* border-color: var(--theme-color); */
-    color: var(--theme-color);
-    border: 2px, solid, var(--theme-color);
-    padding: 8px 17px;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  .navLink:hover {
-    color: #f8f9fa;
-    background-color: var(--theme-color);
-    text-decoration: none;
-  }
-  
-  .searchBtn {
-    color: #333;
-    font-size: 16px;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    transition: color 0.2s;
-  }
-  
-  .searchBtn:hover {
-    color: #28a745;
-  }
-  
-  /* Hover effects */
-  .openAccountBtn:hover {
-    background-color: #218838;
-  }
-  
-  .loginBtn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  /* Mobile Dropdown Styles */
+
+/* Main Navigation Styles */
+.mainNav {
+  background-color: #fff;
+  height: 90px;
+  border-bottom: 1px solid #eee;
+  margin-top: 1px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 100;
+}
+
+.mainNavContent {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brandName {
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+}
+
+.navMenu {
+  font-family: var(--title-font);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLink {
+  font-family: var(--title-font);
+  color: #333;
+  font-size: 15px;
+  padding: 8px 22px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.navLink:hover {
+  color: #f8f9fa;
+  background-color: var(--theme-color);
+}
+
+.create {
+  background-color: var(--theme-color);
+  color: white;
+  border: 2px solid var(--theme-color);
+  padding: 8px 17px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create1 {
+  color: var(--theme-color);
+  border: 2px solid var(--theme-color);
+  padding: 8px 17px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.create:hover {
+  background-color: darken(var(--theme-color), 10%);
+}
+
+.create1:hover {
+  color: darken(var(--theme-color), 10%);
+}
+
+.searchBtn {
+  color: #333;
+  font-size: 16px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.searchBtn:hover {
+  color: #28a745;
+}
+
+/* Mobile Dropdown Styles */
 .mobileMenu {
   display: none;
   position: absolute;
@@ -179,6 +123,13 @@
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 999;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-20px); /* Initially hidden with a slight offset */
+}
+
+.mobileMenu.open {
+  display: block;
+  transform: translateY(0); /* Slide into view */
 }
 
 .mobileMenu a {
@@ -209,27 +160,30 @@
   transition: all 0.3s;
 }
 
-/* Show Hamburger and Hide Desktop Menu for Mobile */
+/* Media Queries */
+@media (max-width: 1024px) {
+  .navMenu {
+    gap: 15px;
+  }
 
-  
-  /* Media Queries */
-  @media (max-width: 1024px) {
-    .navMenu {
-      gap: 15px;
-    }
-  
-    .navLink {
-      padding: 8px 18px;
-      text-decoration: none;
-    }
+  .navLink {
+    padding: 8px 18px;
   }
-  
-  @media (max-width: 768px) {
-    .navMenu {
-      display: none;
-    }
-  
-    .hamburger {
-      display: flex;
-    }
+}
+
+@media (max-width: 768px) {
+  .navMenu {
+    display: none;
   }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    position: absolute;
+    top: 70px; /* Adjust according to your header height */
+    left: 0;
+    width: 100%;
+  }
+}

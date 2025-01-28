@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
-import { FaHeadphones, FaSearch } from 'react-icons/fa';
 import gb1 from '../assets/gb1.png';
 import ForexTaperWidget from './tradingview.jsx';
 
@@ -45,17 +44,15 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu */}
-          {isMobileMenuOpen && (
-            <div className={styles.mobileMenu}>
-              <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-              <Link to="/trading" onClick={() => setMobileMenuOpen(false)}>PAMM Account</Link>
-              <Link to="/market" onClick={() => setMobileMenuOpen(false)}>Join Our Program</Link>
-              <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-              <Link to="/calculator" onClick={() => setMobileMenuOpen(false)}>Calculator</Link>
-              <button className={styles.create1}>Login</button>
-              <button className={styles.create}>Create Account</button>
-            </div>
-          )}
+          <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.open : ''}`}>
+            <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+            <Link to="/trading" onClick={() => setMobileMenuOpen(false)}>PAMM Account</Link>
+            <Link to="/market" onClick={() => setMobileMenuOpen(false)}>Join Our Program</Link>
+            <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            <Link to="/calculator" onClick={() => setMobileMenuOpen(false)}>Calculator</Link>
+            <button className={styles.create1}>Login</button>
+            <button className={styles.create}>Create Account</button>
+          </div>
         </div>
         {/* Forex Widget */}
         <div className="forex-widget-section">
