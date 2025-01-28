@@ -69,7 +69,7 @@ const Contact = () => {
                 <a href="#" className="social-icon"><FaInstagram /></a>
                 <a href="https://t.me/gbtradechat" className="social-icon"><FaTelegram /></a>
                 <a href="#" className="social-icon"><FaYoutube /></a>
-                <a href="#" className="social-icon"><FaTwitter /></a>
+                <a href="https://x.com/GBTradeglobal?t=4M6ODj8a6FLO-NtDDfPtww&s=08 " className="social-icon"><FaTwitter /></a>
               </div>
 
               <div className="contact-details">

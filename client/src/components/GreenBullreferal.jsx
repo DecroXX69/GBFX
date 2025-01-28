@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import styles from './GreenBull.module.css';
-import { Container, Row, Col, Table } from 'react-bootstrap';
+import { Container, Row, Col, Table, Card } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import { CheckCircle2, TrendingUp, Gift, Crown } from 'lucide-react';
 const GreenBullPage = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });

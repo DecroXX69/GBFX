@@ -29,7 +29,7 @@ const Footer = () => {
             <a href="/trading">PAMM Account</a>
             <a href="/market">Join Our Program</a>
             <a href="/contact">Contact Us</a>
-            <a href="/contact">Terms & Conditions</a>
+            <a href="/terms">Terms & Conditions</a>
 
           </nav>
 
@@ -37,7 +37,7 @@ const Footer = () => {
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <FaFacebook size={20} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/GBTradeglobal?t=4M6ODj8a6FLO-NtDDfPtww&s=08 " target="_blank" rel="noopener noreferrer">
               <FaXTwitter size={20} />
             </a>
             <a href="https://t.me/gbtradechat" target="_blank" rel="noopener noreferrer">
