@@ -21,7 +21,7 @@ import Pamm from './components/Pamm';
 import PAMMLanding from './minicomponent/PammLanding';
 import PAMMCalculator from './minicomponent/PAMMCalculator';
 import Home from './components/Home';
-
+import TelegramButton from './components/Telegram';
 function App() {
   return (
     <Router>
@@ -34,6 +34,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/calculator" element={<PAMMCalculator />} />
         </Routes>
+        <TelegramButton />
         <Footer />
       </div>
     </Router>
