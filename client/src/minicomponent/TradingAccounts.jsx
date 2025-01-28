@@ -1,51 +1,57 @@
 import React from 'react';
 import styles from './TradingAccounts.module.css';
 import { 
-  LayoutGrid, 
-  BarChart3,
-  MonitorPlay,
-  BookOpen
+  DollarSign,
+  Briefcase,
+  Users,
+  BarChart
 } from 'lucide-react';
 
 const TradingAccounts = () => {
-  const accounts = [
+  const highlights = [
     {
-      icon: <LayoutGrid className={styles.icon} />,
-      title: "Professional Account",
-      description: "Traders with professional accounts gain access to a wide range of benefits, including enhanced trading platforms"
+      icon: <DollarSign className={styles.icon} />,
+      title: "What is GB Trade?",
+      description: "A revolutionary platform for Forex trading, financial growth, and creating a strong network of business partners."
     },
     {
-      icon: <BarChart3 className={styles.icon} />,
-      title: "Meta Trader 4 Account",
-      description: "The primary feature of a trading overview account is its ability to aggregate information from multiple accounts and"
+      icon: <Briefcase className={styles.icon} />,
+      title: "Tailored for Everyone",
+      description: "Whether you're a beginner or an expert trader, GB Trade equips you with the tools you need to thrive."
     },
     {
-      icon: <MonitorPlay className={styles.icon} />,
-      title: "Meta Trader 5 Account",
-      description: "Trading demo accounts are particularly valuable for novice traders who are new to the world of investing."
+      icon: <Users className={styles.icon} />,
+      title: "Membership Fee",
+      description: "Get started with as little as $100 and unlock the potential for limitless financial growth."
     },
     {
-      icon: <BookOpen className={styles.icon} />,
-      title: "PAMM Account",
-      description: "PAMM accounts also adhere to ethical guidelines that prohibit trading certain financial instruments deemed"
+      icon: <BarChart className={styles.icon} />,
+      title: "4 Income Streams",
+      description: (
+        <>
+          1. Trading Profit<br />
+          2. Magic Income (Trading Share Commission)<br />
+          3. Permanent Rewards<br />
+          4. Royalty Income
+        </>
+      )
     }
   ];
 
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <span className={styles.tag}>ACCOUNT</span>
-        <h1 className={styles.title}>Trading Accounts</h1>
+        <h1 className={styles.title}><i>"Every great fortune starts with a small decision. Let today be the day you decide to build your financial future."</i></h1>
       </div>
       
       <div className={styles.cardContainer}>
-        {accounts.map((account, index) => (
+        {highlights.map((item, index) => (
           <div key={index} className={styles.card}>
             <div className={styles.iconWrapper}>
-              {account.icon}
+              {item.icon}
             </div>
-            <h2 className={styles.accountTitle}>{account.title}</h2>
-            <p className={styles.description}>{account.description}</p>
+            <h2 className={styles.cardTitle}>{item.title}</h2>
+            <p className={styles.description}>{item.description}</p>
           </div>
         ))}
       </div>
