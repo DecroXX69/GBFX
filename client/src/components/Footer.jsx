@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.copyright}>
-          © {new Date().getFullYear()} GBFX. All rights reserved.
+          © {new Date().getFullYear()} GBFX. All rights reserved....
         </div>
       </div>
     </footer>
