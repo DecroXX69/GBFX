@@ -43,10 +43,10 @@ const Footer = () => {
             <a href="https://t.me/gbtradechat" target="_blank" rel="noopener noreferrer">
               <FaTelegram size={20} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/gbtrade25" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={20} />
               </a>
-              <a href="https://Youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@gbtradeofficial" target="_blank" rel="noopener noreferrer">
               <FaYoutube size={20} />
               </a>
             

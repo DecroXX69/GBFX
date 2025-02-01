@@ -1,9 +1,7 @@
-
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FaFacebookF, FaInstagram, FaTelegram, FaYoutube, FaTwitter } from 'react-icons/fa';
 import './Contact.css';
-import iconPhone from '../assets/1.png';
 import iconMail from '../assets/2.png';
 import iconLocation from '../assets/3.png';
 
@@ -66,20 +64,19 @@ const Contact = () => {
 
               <div className="social-links">
                 <a href="#" className="social-icon"><FaFacebookF /></a>
-                <a href="#" className="social-icon"><FaInstagram /></a>
-                <a href="https://t.me/gbtradechat" className="social-icon"><FaTelegram /></a>
-                <a href="#" className="social-icon"><FaYoutube /></a>
-                <a href="https://x.com/GBTradeglobal?t=4M6ODj8a6FLO-NtDDfPtww&s=08 " className="social-icon"><FaTwitter /></a>
+                <a href="https://www.instagram.com/gbtrade25" target='blank' className="social-icon"><FaInstagram /></a>
+                <a href="https://t.me/gbtradechat" target='blank' className="social-icon"><FaTelegram /></a>
+                <a href="https://www.youtube.com/@gbtradeofficial" target='blank' className="social-icon"><FaYoutube /></a>
+                <a href="https://x.com/GBTradeglobal?t=4M6ODj8a6FLO-NtDDfPtww&s=08" target='blank' className="social-icon"><FaTwitter /></a>
               </div>
 
               <div className="contact-details">
                 <div className="detail-item contact-info-item phone">
                   <div className="icon-wrapper">
-                    <img src={iconPhone} alt="Phone Icon" className="location-icon" />
+                    <FaTelegram className="social-icon" />
                   </div>
                   <div className="detail-text">
-                    <p>9876543210</p>
-                    <p>0123456789</p>
+                    <p><a href="https://t.me/gbtradechat">Contact us on Telegram</a></p>
                   </div>
                 </div>
 
@@ -99,8 +96,8 @@ const Contact = () => {
                     <img src={iconLocation} alt="Location Icon" className="location-icon" />
                   </div>
                   <div className="detail-text">
-                    <p>88 Sheridan Street</p>
-                    <p>534 Victoria Trail</p>
+                    <p> Downtown Dubai</p>
+                    <p> United Arab Emirates</p>
                   </div>
                 </div>
 
@@ -139,4 +136,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
