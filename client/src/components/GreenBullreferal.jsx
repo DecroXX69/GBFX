@@ -34,50 +34,50 @@ const GreenBullPage = () => {
       rank: ' Beginner',
       referralCommission: '15%',
       salesAmount: '$100',
-      reward: '$100 Reward',
+      reward: 'N/A',
       description: 'Start your journey with our beginner-friendly platform'
     },
     {
       rank: ' Bronze',
       referralCommission: '20%',
       salesAmount: '$500',
-      reward: '$300 Reward',
-      description: 'Unlock advanced trading strategies and earn more'
+      reward: '$300 ',
+      description: 'One Time Permanent Reward*'
     },
     {
       rank: ' Silver',
       referralCommission: '23%',
       salesAmount: '$1,000',
       reward: '$1,000 Reward',
-      description: 'Experience the benefits of a dedicated support team'
+      description: 'One Time Permanent Reward*'
     },
     {
       rank: ' Gold',
       referralCommission: '26%',
       salesAmount: '$2,000',
       reward: '$4,000 Reward',
-      description: 'Gain access to premium market insights and analysis'
+      description: 'One Time Permanent Reward*'
     },
     {
       rank: ' Diamond',
       referralCommission: '29%',
       salesAmount: '$5,000',
       reward: '$20,000 Reward',
-      description: 'Enjoy VIP treatment with exclusive event invitations'
+      description: 'One Time Permanent Reward*'
     },
     {
       rank: ' Platinum',
       referralCommission: '32%',
       salesAmount: '$10,000',
       reward: '$80,000 Reward',
-      description: 'Maximize your earnings with top-tier trading tools'
+      description: 'One Time Permanent Reward*'
     },
     {
       rank: ' Advisor',
       referralCommission: '35%',
       salesAmount: '$25,000',
       reward: '$400,000 Reward',
-      description: 'Become a mentor and earn unlimited residual income'
+      description: 'One Time Permanent Reward*'
     }
   ];
 
@@ -85,12 +85,12 @@ const GreenBullPage = () => {
     {
       Icon: CheckCircle2,
       title: "Trading Income",
-      description: "Earn 10-40% monthly returns on your investments"
+      description: "Earn 10-40% monthly returns on your investments *."
     },
     {
       Icon: Gift,
       title: "Referral Income",
-      description: "Up to 35% commission on team trading volume"
+      description: "Up to 35% commission on team trading volume *."
     },
     {
       Icon: TrendingUp,
@@ -100,7 +100,7 @@ const GreenBullPage = () => {
     {
       Icon: Crown,
       title: "Milestone Rewards",
-      description: "Cash bonuses up to $400,000 for achieving ranks"
+      description: "Cash bonuses up to $400,000 for achieving ranks *."
     }
   ];
 
