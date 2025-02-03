@@ -85,8 +85,9 @@ const Contact = () => {
                     <img src={iconMail} alt="Mail Icon" className="location-icon" />
                   </div>
                   <div className="detail-text">
-                    <p>gbfx.support@gmail.com</p>
-                    <p>gbfx.official@gmail.com</p>
+                  <a href="mailto:gbtrade25@gmail.com" >gbtrade25@gmail.com</a>
+
+                    
                     
                   </div>
                 </div>
