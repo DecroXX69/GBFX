@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import { FaFacebookF, FaInstagram, FaTelegram, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { RiTelegram2Line } from "react-icons/ri";
 import './Contact.css';
 import iconMail from '../assets/2.png';
 import iconLocation from '../assets/3.png';
@@ -63,9 +64,9 @@ const Contact = () => {
               </h2>
 
               <div className="social-links">
-                <a href="#" className="social-icon"><FaFacebookF /></a>
+                <a href="https://www.facebook.com/people/GB-Trade/61572568929119/" className="social-icon"><FaFacebookF /></a>
                 <a href="https://www.instagram.com/gbtrade25" target='blank' className="social-icon"><FaInstagram /></a>
-                <a href="https://t.me/gbtradechat" target='blank' className="social-icon"><FaTelegram /></a>
+                <a href="https://t.me/gbtradechat" target='blank' className="social-icon"><RiTelegram2Line /></a>
                 <a href="https://www.youtube.com/@gbtradeofficial" target='blank' className="social-icon"><FaYoutube /></a>
                 <a href="https://x.com/GBTradeglobal?t=4M6ODj8a6FLO-NtDDfPtww&s=08" target='blank' className="social-icon"><FaTwitter /></a>
               </div>
@@ -73,7 +74,7 @@ const Contact = () => {
               <div className="contact-details">
                 <div className="detail-item contact-info-item phone">
                   <div className="icon-wrapper">
-                    <FaTelegram className="social-icon" />
+                    <RiTelegram2Line className="social-icon1" />
                   </div>
                   <div className="detail-text">
                     <p><a href="https://t.me/gbtradechat">Contact us on Telegram</a></p>

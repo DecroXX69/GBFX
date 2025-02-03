@@ -5,7 +5,7 @@ import img from '../assets/process-1.jpg';
 const HowItWorks = () => {
   return (
     <div className="how-it-works">
-      <div className="container">
+      <div className="container0">
 
         <div className="works-content">
           {/* Left side - Text content */}

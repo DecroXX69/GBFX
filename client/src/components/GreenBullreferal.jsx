@@ -1,85 +1,102 @@
-// GreenBullPage.jsx
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useLayoutEffect } from 'react';
 import styles from "./GreenBullReferall.module.css";
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { CheckCircle2, TrendingUp, Gift, Crown } from 'lucide-react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import CountUp from 'react-countup';
+import HowToBecomePAMM from './HowtoBecomePamm';
+import Lottie from 'lottie-react';
+import howToAnimation from './infinity-symbol.json';
 
 const GreenBullPage = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [activeRow, setActiveRow] = useState(-1);
+  const [expandedRank, setExpandedRank] = useState(-1);
+
+  // Detect mobile/desktop based on window width
+  useLayoutEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const matchHandler = (event) => setIsMobile(event.matches);
+    mediaQuery.addEventListener('change', matchHandler);
+    
+    // Handle initial state
+    if (mediaQuery.matches) setIsMobile(true);
+    else setIsMobile(false);
+
+    return () => mediaQuery.removeEventListener('change', matchHandler);
+  }, []);
+
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
   }, []);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      { breakpoint: 768, settings: { slidesToShow: 2 } },
-      { breakpoint: 480, settings: { slidesToShow: 1 } }
-    ]
-  };
-
   const ranks = [
     {
-      rank: ' Beginner',
+      rank: 'Beginner',
+      investment: '$100',
       referralCommission: '15%',
-      salesAmount: '$100',
+      teamVolume: '$0',
       reward: 'N/A',
-      description: 'Start your journey with our beginner-friendly platform'
+      description: 'Start your journey to financial freedom with just $100...'
     },
     {
-      rank: ' Bronze',
+      rank: 'Bronze',
+      investment: '$500',
       referralCommission: '20%',
-      salesAmount: '$500',
-      reward: '$300 ',
-      description: 'One Time Permanent Reward*'
+      teamVolume: '$10,000',
+      reward: '$300',
+      description: 'Level up to Bronze! Invest $500...'
     },
     {
-      rank: ' Silver',
+      rank: 'Silver',
+      investment: '$1,000',
       referralCommission: '23%',
-      salesAmount: '$1,000',
-      reward: '$1,000 Reward',
-      description: 'One Time Permanent Reward*'
+      teamVolume: '$30,000',
+      reward: '$1,000',
+      description: 'Become a Silver leader! Invest $1K...'
     },
     {
-      rank: ' Gold',
+      rank: 'Gold',
+      investment: '$2,000',
       referralCommission: '26%',
-      salesAmount: '$2,000',
-      reward: '$4,000 Reward',
-      description: 'One Time Permanent Reward*'
+      teamVolume: '$100,000',
+      reward: '$4,000',
+      description: 'Join the Gold elite!...'
     },
     {
-      rank: ' Diamond',
+      rank: 'Diamond',
+      investment: '$5,000',
       referralCommission: '29%',
-      salesAmount: '$5,000',
-      reward: '$20,000 Reward',
-      description: 'One Time Permanent Reward*'
+      teamVolume: '$500,000',
+      reward: '$20,000',
+      description: 'Diamond status awaits!...'
     },
     {
-      rank: ' Platinum',
+      rank: 'Platinum',
+      investment: '$10,000',
       referralCommission: '32%',
-      salesAmount: '$10,000',
-      reward: '$80,000 Reward',
-      description: 'One Time Permanent Reward*'
+      teamVolume: '$2,000,000',
+      reward: '$80,000',
+      description: 'Platinum is where legends are made...'
     },
     {
-      rank: ' Advisor',
+      rank: 'Advisor',
+      investment: '$25,000',
       referralCommission: '35%',
-      salesAmount: '$25,000',
-      reward: '$400,000 Reward',
-      description: 'One Time Permanent Reward*'
+      teamVolume: '$10,000,000',
+      reward: '$400,000',
+      description: 'Become a Platinum Advisor...'
     }
   ];
+
+  const handleHover = (rowNumber) => {
+    if (!isMobile) setActiveRow(rowNumber);
+  };
+
+  const handleClick = (index) => {
+    if (isMobile) setExpandedRank(index);
+  };
 
   const incomeStreams = [
     {
@@ -122,81 +139,31 @@ const GreenBullPage = () => {
         <Container>
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
-              Unlock Your Financial Potential <br />
-              <span className={styles.heroSubtitle}>with</span>
-              <h2 className={styles.heroTitle}><span style={{color:'rgb(5, 23, 71)'}}>GB</span>
-              <span style={{color:'rgb(29, 80, 19)'}}>Trade</span></h2>   
-
+              Start with as Low as $100 <br />
             </h1>
+            <h2 className={styles.heroTitle}>
+              <span style={{ color: 'rgb(5, 23, 71)' }}>Grow it To</span>
+              <div className={styles.infiniteWrapper}>
+                <Lottie 
+                  animationData={howToAnimation} 
+                  loop={true} 
+                  style={{ width: '40%', height: 'auto' }} 
+                />
+              </div>
+            </h2>
             <p className={styles.heroDescription}>
-            <b> Join our elite community and start earning passive income today</b><br />
+              <b>Join our elite community...</b>
             </p>
-            <a href="#join-now" className={styles.ctaButton}>
+            <a href="/Authentication" className={styles.ctaButton}>
               Start Your Journey →
-            </a><br />
+            </a>
           </div>
         </Container>
       </div>
 
-      {/* Rank Progression Section */}
-      <section className={styles.rankProgression} data-aos="zoom-in">
-        <Container>
-          <h2 className={styles.sectionTitle}>Your Path to Wealth</h2>
-
-          <div className={styles.rankProgression4}>
-            {ranks.slice(0, 4).map((rank, index) => (
-              <div 
-                className={`${styles.rankCard} ${styles['rank-' + index]}`}
-                key={index}
-              >
-                <div className={styles.rankBadge}>
-                  <Crown className={styles.rankIcon} color="white" />
-                  <span className={styles.rankName}>{rank.rank}</span>
-                </div>
-                <h3 className={styles.rankEarnings}>
-                  Earn up to <CountUp end={parseInt(rank.referralCommission)} duration={1} />%
-                </h3>
-                <p className={styles.rankDetails}>
-                  Invest as low as {rank.salesAmount}
-                </p>
-                <div className={styles.rankReward}>
-                  <Gift className={styles.rankIcon} color="#FFD700" />&nbsp;
-                  {rank.reward}
-                </div>
-                <p className={styles.rankDescription}>{rank.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className={styles.rankProgression3}>
-            {ranks.slice(4).map((rank, index) => (
-              <div 
-                className={`${styles.rankCard} ${styles['rank-' + (index + 4)]}`}
-                key={index}
-              >
-                <div className={styles.rankBadge}>
-                  <Crown className={styles.rankIcon} color="white" />
-                  <span className={styles.rankName}>{rank.rank}</span>
-                </div>
-                <h3 className={styles.rankEarnings}>
-                  Earn up to <CountUp end={parseInt(rank.referralCommission)} duration={1} />%
-                </h3>
-                <p className={styles.rankDetails}>
-                  Invest as low as {rank.salesAmount}
-                </p>
-                <div className={styles.rankReward}>
-                  <Gift className={styles.rankIcon} color="#FFD700" />&nbsp;
-                  {rank.reward}
-                </div>
-                <p className={styles.rankDescription}>{rank.description}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Income Streams Section */}
-      <section className={styles.incomeStreams} data-aos="slide-left">
+      <HowToBecomePAMM />
+{/* Income Streams Section */}
+<section className={styles.incomeStreams} data-aos="slide-left">
         <Container>
           <div className={styles.incomeGridWrapper}>
             <h1 className={styles.sectionTitle}>How You Earn</h1>
@@ -215,16 +182,104 @@ const GreenBullPage = () => {
           </div>
         </Container>
       </section>
+      {/* Rank Progression Section */}
+      <section className={styles.rankProgression} data-aos="zoom-in">
+        <Container>
+          <h2 className={styles.sectionTitle}>Guide To Ranks</h2>
 
-      {/* CTA Section */}
-      <section className={styles.joinSection} id="join-now" data-aos="zoom-out">
+          {/* First Row */}
+          <div
+            className={styles.rankProgression4}
+            onMouseEnter={() => handleHover(0)}
+            onMouseLeave={() => handleHover(-1)}
+          >
+            {ranks.slice(0, 4).map((rank, index) => (
+              <div
+                key={index}
+                className={`${styles.rankCard} ${styles['rank-' + index]} ${
+                  (isMobile ? expandedRank === index : activeRow === 0) ? styles.expanded : ''
+                }`}
+                onClick={() => handleClick(index)}
+              >
+                <div className={styles.rankBadge}>
+                  <Crown className={styles.rankIcon} color="white" />
+                  <span className={styles.rankName}>{rank.rank}</span>
+                </div>
+                <h3 className={styles.rankEarnings}>
+                  Earn up to <CountUp end={parseInt(rank.referralCommission)} duration={1} />%
+                </h3>
+                <p className={styles.rankDetails} style={{fontWeight:'bold'}}>
+                  Invest as low as {rank.investment}
+                </p>
+                <div className={styles.rankReward} style={{fontWeight:'bold'}}>
+                  <Gift className={styles.rankIcon} color="#FFD700" />&nbsp;
+                  {rank.reward}
+                </div>
+                <p className={styles.rankDescription}>{rank.description}</p>
+
+                <div className={styles.rankRequirements}>
+                  <strong>Requirements:</strong>
+                  <p style={{fontWeight:'bold'}}>Investment: {rank.investment}</p>
+                  <p>Team Volume: {rank.teamVolume}</p>
+                  <p>Referral Commission: {rank.referralCommission}</p>
+                  <p style={{fontWeight:'bold'}}>Reward: {rank.reward}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Second Row */}
+          <div
+            className={styles.rankProgression3}
+            onMouseEnter={() => handleHover(1)}
+            onMouseLeave={() => handleHover(-1)}
+          >
+            {ranks.slice(4).map((rank, localIndex) => (
+              <div
+                key={localIndex}
+                className={`${styles.rankCard} ${styles['rank-' + (4 + localIndex)]} ${
+                  (isMobile ? expandedRank === (4 + localIndex) : activeRow === 1) ? styles.expanded : ''
+                }`}
+                onClick={() => handleClick(4 + localIndex)}
+              >
+                <div className={styles.rankBadge}>
+                  <Crown className={styles.rankIcon} color="white" />
+                  <span className={styles.rankName}>{rank.rank}</span>
+                </div>
+                <h3 className={styles.rankEarnings}>
+                  Earn up to <CountUp end={parseInt(rank.referralCommission)} duration={1} />%
+                </h3>
+                <p className={styles.rankDetails} style={{fontWeight:'bold'}}>
+                  Invest as low as {rank.investment}
+                </p>
+                <div className={styles.rankReward} style={{fontWeight:'bold'}}>
+                  <Gift className={styles.rankIcon} color="#FFD700" />&nbsp;
+                  {rank.reward}
+                </div>
+                <p className={styles.rankDescription}>{rank.description}</p>
+
+                <div className={styles.rankRequirements}>
+                  <strong>Requirements:</strong>
+                  <p style={{fontWeight:'bold'}}>Investment: {rank.investment}</p>
+                  <p>Team Volume: {rank.teamVolume}</p>
+                  <p>Referral Commission: {rank.referralCommission}</p>
+                  <p style={{fontWeight:'bold'}}>Reward: {rank.reward}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className={styles.joinSection} id="join-now">
         <Container>
           <div className={styles.ctaContent}>
             <h2 className={styles.sectionTitle}>Ready to Transform Your Finances?</h2>
             <p className={styles.ctaText}>
               Start with as little as $100 and grow your income exponentially
             </p>
-            <a href="/contact" className={styles.ctaButton}>
+            <a href="/Authentication" className={styles.ctaButton}>
               Join Green Bull Now →
             </a>
           </div>

@@ -31,7 +31,7 @@ const Navbar = () => {
               <Link to="/trading" className={styles.navLink}>PAMM Account</Link>
               <Link to="/market" className={styles.navLink}>Join Our Program</Link>
               <Link to="/contact" className={styles.navLink}>Contact</Link>
-              <a href="https://www.thecalculatorsite.com/finance/calculators/daily-compound-interest.php" className={styles.navLink}>Calculator</a>
+              <a href="https://www.thecalculatorsite.com/finance/calculators/daily-compound-interest.php" target="_blank" className={styles.navLink}>Calculator</a>
               <a href="/Authentication" 
                  className={styles.create} 
                  style={{ textDecoration: 'none' }}>

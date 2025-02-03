@@ -34,7 +34,7 @@ const Footer = () => {
           </nav>
 
           <div className={styles.social}>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/people/GB-Trade/61572568929119/" target="_blank" rel="noopener noreferrer">
               <FaFacebook size={20} />
             </a>
             <a href="https://x.com/GBTradeglobal?t=4M6ODj8a6FLO-NtDDfPtww&s=08 " target="_blank" rel="noopener noreferrer">

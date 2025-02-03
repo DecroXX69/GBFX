@@ -98,6 +98,21 @@
     /* border-color: #00DC82; */
     color: white;
   }
+
+  .social-icon1 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E5E5E5;
+    
+    transition: all 0.3s ease;
+    color: #4179DC;
+    /* border-color: #00DC82; */
+    
+  }
   
   .contact-info {
     opacity: 1;
