@@ -32,7 +32,7 @@ const Navbar = () => {
               <Link to="/market" className={styles.navLink}>Join Our Program</Link>
               <Link to="/contact" className={styles.navLink}>Contact</Link>
               <Link to="/calculator" className={styles.navLink}>Calculator</Link>
-              <button className={styles.create1}>Login</button>
+              <Link to="https://gbtrade.io/Authentication" ><button className={styles.create1}>Login</button></Link>
               <button className={styles.create}>Create Account</button>
             </div>
 
