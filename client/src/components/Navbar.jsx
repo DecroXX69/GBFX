@@ -19,21 +19,26 @@ const Navbar = () => {
             {/* Logo */}
             <div className={styles.brand}>
               <div className={styles.logo}>
-              <a href='/'>   <img src={gb1} alt="GBTrade Logo" /></a>
+              <a href='/HomePage'>   <img src={gb1} alt="GBTrade Logo" /></a>
               </div>
-              <a href='/' style={{textDecoration:'none'}}> <div className={styles.brandName}><span style={{ color: '#051747' }}>GB</span>
+              <a href='/HomePage' style={{textDecoration:'none'}}> <div className={styles.brandName}><span style={{ color: '#051747' }}>GB</span>
               <span style={{ color: '#1d5013' }}>Trade</span></div></a>
             </div>
 
             {/* Desktop Menu */}
             <div className={styles.navMenu}>
-              <Link to="/" className={styles.navLink}>Home</Link>
+              <Link to="/HomePage" className={styles.navLink}>Home</Link>
               <Link to="/trading" className={styles.navLink}>PAMM Account</Link>
               <Link to="/market" className={styles.navLink}>Join Our Program</Link>
               <Link to="/contact" className={styles.navLink}>Contact</Link>
-              <Link to="/calculator" className={styles.navLink}>Calculator</Link>
-              <button className={styles.create1}>Login</button>
-              <button className={styles.create}>Create Account</button>
+              <a href="https://www.thecalculatorsite.com/finance/calculators/daily-compound-interest.php" className={styles.navLink}>Calculator</a>
+              <a href="/Authentication" 
+                 className={styles.create} 
+                 style={{ textDecoration: 'none' }}>
+                Login
+              </a>
+
+              {/* <button className={styles.create}>Create Account</button> */}
             </div>
 
             {/* Mobile Hamburger Icon */}
@@ -46,13 +51,17 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.open : ''}`}>
-            <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+            <Link to="/HomePage" onClick={() => setMobileMenuOpen(false)}>Home</Link>
             <Link to="/trading" onClick={() => setMobileMenuOpen(false)}>PAMM Account</Link>
             <Link to="/market" onClick={() => setMobileMenuOpen(false)}>Join Our Program</Link>
             <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
             <Link to="/calculator" onClick={() => setMobileMenuOpen(false)}>Calculator</Link>
-            <button className={styles.create1}>Login</button>
-            <button className={styles.create}>Create Account</button>
+            <a href="/Authentication" 
+                 className={styles.create} 
+                 style={{ textDecoration: 'none' }}>
+                Login
+              </a>
+            {/* <button className={styles.create}>Create Account</button> */}
           </div>
         </div>
         {/* Forex Widget */}

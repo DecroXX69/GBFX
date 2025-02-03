@@ -91,10 +91,10 @@ const TradingPage = () => {
               <div className="row h-100 align-items-center">
                 <div className="col-lg-6 hero-content">
                   <h1 className="hero-title">{slide.title}</h1>
-                  <p className="hero-subtitle">{slide.subtitle}</p>
-                  <button className="create-account-btn">
-                    Create Account
-                  </button>
+                  <p className="hero-subtitle">{slide.subtitle}</p> <a href="/Authentication" 
+                  className="create-account-btn">
+                    Login
+                </a>
                 </div>
               </div>
             </div>

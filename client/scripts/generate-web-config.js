@@ -26,3 +26,4 @@ const outputPath = path.join(__dirname, '../build/web.config');
 
 fs.writeFileSync(outputPath, webConfigContent, 'utf8');
 console.log('web.config generated in build folder.');
+
